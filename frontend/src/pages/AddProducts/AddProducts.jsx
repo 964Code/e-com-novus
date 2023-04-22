@@ -1,7 +1,12 @@
 import React from 'react';
+import ProductForm from '../../components/ProductForm/ProductForm';
 
 function AddProducts() {
-  return <h1>Add Products-page</h1>;
+  return (
+    <>
+      <ProductForm />
+    </>
+  );
 }
 
 export default AddProducts;
