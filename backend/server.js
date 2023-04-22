@@ -2,9 +2,12 @@
 //? Importing the required modules: express: for creating the server, dotenv: for loading the environment variables
 const express = require('express');
 const dotenv = require('dotenv').config();
+const colors = require('colors');
 const { errorHandler } = require('./middleware/errorMiddleware');
 const port = process.env.PORT || 5000;
+const connectDB = require('./config/db');
 
+connectDB();
 
 // app is the express server
 const app = express();
