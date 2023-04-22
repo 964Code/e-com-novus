@@ -6,10 +6,14 @@ const router = express.Router();
 const { getProducts, createProduct, updateProduct, deleteProduct } = require('../controllers/productController');
 
 // If request is a get, post, put, delete, it will match the route and execute the callback function that is defined in the controller.
-router.get('/', getProducts);
+router.route('/').get(getProducts).post(createProduct);
+router.route('/:id').put(updateProduct).delete(deleteProduct);
+
+//! The code below is the same as the code above. The code above is just a shorter way of writing the same thing.
+/* router.get('/', getProducts);
 router.post('/', createProduct);
 router.put('/:id', updateProduct);
-router.delete('/:id', deleteProduct);
+router.delete('/:id', deleteProduct); */
 
 
 module.exports = router;
