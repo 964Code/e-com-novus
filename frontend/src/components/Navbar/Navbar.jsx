@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'Products', 'About'];
+const pages = ['Add Products', 'Products', 'About'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -120,7 +120,12 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link to={`/${page}`}>{page}</Link>
+                <Link
+                  to={`/${page.replace(/\s/g, '')}`}
+                  style={{ color: 'white', textDecoration: 'none' }}
+                >
+                  {page}
+                </Link>
               </Button>
             ))}
           </Box>
