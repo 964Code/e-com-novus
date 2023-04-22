@@ -3,12 +3,22 @@
 
 const express = require('express');
 const router = express.Router();
+const { getProducts, createProduct, updateProduct, deleteProduct } = require('../controllers/productController');
+
+// If request is a get, post, put, delete, it will match the route and execute the callback function that is defined in the controller.
+router.get('/', getProducts);
+router.post('/', createProduct);
+router.put('/:id', updateProduct);
+router.delete('/:id', deleteProduct);
 
 
-//get and post requests are handled by the router. in the server.js we tell express to use the router for the /api/products route and then the router handles the requests for the /api/products route by matching the request method and the route. 
+module.exports = router;
 
 
-router.get('/', (req, res) => {
+//get and post requests are handled by the router. in the server.js we tell express to use the router for the /api/products route and then the router handles the requests for the /api/products route by matching the request method and the route.
+
+// OLD CODE
+/* router.get('/', (req, res) => {
     res.status(200).json({ message: 'Get products' });
 });
 
@@ -22,6 +32,5 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     res.status(200).json({ message: `Deleted product ${req.params.id}` });
-});
+}); */
 
-module.exports = router;
