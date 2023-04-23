@@ -1,12 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-
 const initialState = {
     products: [],
     isLoading: true,
     error: null,
 };
-
 
 export const productSlice = createSlice({
     name: 'products',
