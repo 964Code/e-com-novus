@@ -1,96 +1,59 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const ProductList = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const ProductListContainer = styled.div`
+  border: 1px solid red;
   width: 100%;
   height: 100%;
-  background-color: #f5f5f5;
-  padding: 20px;
+  margin: 30px 0;
+  display: flex;
+`;
+
+export const ProductList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  border: 1px solid yellow;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Product = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid blue;
+  width: 285px;
+  height: 510px;
+  margin: 0 auto;
+`;
+
+export const ProductImageContainer = styled.div`
+  min-height: 70%;
+  border: 1px solid green;
+  min-width: 100%;
 `;
 
 export const ProductImage = styled.img`
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-`;
-
-export const ProductTitle = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 10px 0;
-`;
-
-export const ProductDescription = styled.p`
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 10px 0;
-`;
-
-export const ProductPrice = styled.p`
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 10px 0;
-`;
-
-export const ProductButton = styled.button`
   width: 100%;
-  height: 40px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  margin: 10px 0;
-  cursor: pointer;
+  height: 100%;
 `;
 
-export const ProductLink = styled(Link)`
-  width: 100%;
-  height: 40px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  margin: 10px 0;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ProductButtonContainer = styled.div`
+export const groupWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 `;
 
-export const ProductButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+export const ProductTitle = styled.h2``;
+
+export const ProductDescription = styled.p`
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
+
+export const ProductPrice = styled.p``;
+
+export const ProductButton = styled.button``;
+
+export const ProductLink = styled(Link)``;
+
+export const ProductButtonContainer = styled.div``;

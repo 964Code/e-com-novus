@@ -1,13 +1,47 @@
 import React from 'react';
 import * as S from './styled';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ProductList({ products }) {
+  const navigate = useNavigate();
   return (
     <>
-      {products?.map((product) => (
+      <S.ProductListContainer>
+        <S.ProductList>
+          {products?.map((product) => (
+            <S.Product key={product._id}>
+              <S.ProductImageContainer>
+                <S.ProductImage src={product.image} alt={product.title} />
+              </S.ProductImageContainer>
+              <S.groupWrapper>
+                <S.ProductTitle>{product.title}</S.ProductTitle>
+                <S.ProductDescription>
+                  {product.description}
+                </S.ProductDescription>
+                <S.ProductPrice>Price: ${product.price}</S.ProductPrice>
+                <S.ProductButton>Buy</S.ProductButton>
+                <S.ProductButton
+                  onClick={() => {
+                    navigate(`/products/update_product/${product._id}`);
+                  }}
+                >
+                  Edit
+                </S.ProductButton>
+              </S.groupWrapper>
+            </S.Product>
+          ))}
+        </S.ProductList>
+      </S.ProductListContainer>
+    </>
+  );
+}
+
+export default ProductList;
+
+{
+  /* {products?.map((product) => (
         <S.Product key={product._id}>
-          {/* <S.ProductImage src={product.image} alt={product.title} /> */}
+          <S.ProductImage src={product.image} alt={product.title} />
           <S.ProductImage
             src={
               'https://img.freepik.com/free-vector/set-facial-creams-products_24877-54321.jpg'
@@ -22,9 +56,18 @@ function ProductList({ products }) {
             <S.ProductButton onClick={() => {}}>edit</S.ProductButton>
           </Link>
         </S.Product>
-      ))}
-    </>
-  );
+      ))} */
 }
 
-export default ProductList;
+{
+  /* <S.Product>
+  <S.ProductImageContainer>
+    <S.ProductImage
+      src={
+        'https://img.freepik.com/free-vector/set-facial-creams-products_24877-54321.jpg'
+      }
+      alt={'product.title'}
+    />
+  </S.ProductImageContainer>
+</S.Product>; */
+}
