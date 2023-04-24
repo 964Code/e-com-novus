@@ -102,9 +102,7 @@ export const productSlice = createSlice({
                 state.error = action.error.message;
                 console.log(action.payload.data.message)
                 alert(`Product creation failed: ${action.payload.data.message}`)
-
-            }
-            )
+            })
             .addCase(updateProduct.pending, (state, action) => {
                 state.isLoading = true;
             })
@@ -121,8 +119,7 @@ export const productSlice = createSlice({
             })
             .addCase(deleteProduct.pending, (state, action) => {
                 state.isLoading = true;
-            }
-            )
+            })
             .addCase(deleteProduct.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.products = state.products.filter((product) => product._id !== action.payload._id);
@@ -143,3 +140,7 @@ export const { } = productSlice.actions;
 export default productSlice.reducer;
 
 export const selectProducts = (state) => state.products.products;
+
+export const selectProductById = (state, id) => {
+    return state.products.products.find(product => product._id === id);
+};

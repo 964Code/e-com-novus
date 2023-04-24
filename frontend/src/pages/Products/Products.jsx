@@ -5,6 +5,7 @@ import {
   selectProducts,
   deleteProduct,
 } from '../../features/products/productSlice';
+import { Link } from 'react-router-dom';
 
 function Products() {
   const products = useSelector(selectProducts);
@@ -30,13 +31,9 @@ function Products() {
           >
             Delete
           </button>
-          <button
-            onClick={() => {
-              console.log('edit');
-            }}
-          >
-            edit
-          </button>
+          <Link to={`/products/update_product/${product._id}`}>
+            <button onClick={() => {}}>edit</button>
+          </Link>
         </div>
       ))}
     </div>
