@@ -7,6 +7,7 @@ import {
 } from '../../features/products/productSlice';
 import { useParams } from 'react-router-dom';
 import { selectProductById } from '../../features/products/productSlice';
+import Snackbar from '../Snackbar/Snackbar';
 
 function ProductForm() {
   const dispatch = useDispatch();
@@ -24,12 +25,14 @@ function ProductForm() {
   const [price, setPrice] = useState(selectedProduct?.price || '');
   const [category, setCategory] = useState(selectedProduct?.category || '');
   const [image, setImage] = useState(selectedProduct?.image || '');
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarType, setSnackbarType] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if (id) {
-      dispatch(
+      const res = await dispatch(
         updateProduct({
           _id: selectedProduct._id,
           title,
@@ -39,6 +42,13 @@ function ProductForm() {
           image,
         })
       );
+      if (res.error) {
+        setSnackbarMessage(res.payload);
+        setSnackbarType('error');
+      } else {
+        setSnackbarMessage('Product created successfully!');
+        setSnackbarType('success');
+      }
       // reset form
       setTitle('');
       setDescription('');
@@ -48,7 +58,17 @@ function ProductForm() {
       return;
     }
 
-    dispatch(createProduct({ title, description, price, category, image }));
+    const res = await dispatch(
+      createProduct({ title, description, price, category, image })
+    );
+    if (res.error) {
+      setSnackbarMessage(res.payload);
+      setSnackbarType('error');
+    } else {
+      setSnackbarMessage('Product created successfully!');
+      setSnackbarType('success');
+    }
+    console.log(res.payload);
     // reset form
     setTitle('');
     setDescription('');
@@ -59,6 +79,7 @@ function ProductForm() {
 
   return (
     <section>
+      <Snackbar type={snackbarType} message={snackbarMessage} />
       <form onSubmit={onSubmit}>
         <div
           className='form-group'

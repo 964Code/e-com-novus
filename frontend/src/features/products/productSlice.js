@@ -34,7 +34,7 @@ export const createProduct = createAsyncThunk(
 
         } catch (error) {
             const message = (error.response && error.response.data.message) || error.message || error.toString();
-            return thunkAPI.rejectWithValue(error.response);
+            return thunkAPI.rejectWithValue(message);
 
         }
     }
@@ -95,13 +95,11 @@ export const productSlice = createSlice({
             .addCase(createProduct.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.products.push(action.payload);
-                alert('Product created successfully')
+
             })
             .addCase(createProduct.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message;
-                console.log(action.payload.data.message)
-                alert(`Product creation failed: ${action.payload.data.message}`)
             })
             .addCase(updateProduct.pending, (state, action) => {
                 state.isLoading = true;
@@ -110,12 +108,12 @@ export const productSlice = createSlice({
                 state.isLoading = false;
                 const index = state.products.findIndex((product) => product._id === action.payload._id);
                 state.products[index] = action.payload;
-                alert('Product updated successfully')
+
             })
             .addCase(updateProduct.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message;
-                alert(`Product update failed: ${action.payload.data.message}`)
+
             })
             .addCase(deleteProduct.pending, (state, action) => {
                 state.isLoading = true;
@@ -123,12 +121,12 @@ export const productSlice = createSlice({
             .addCase(deleteProduct.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.products = state.products.filter((product) => product._id !== action.payload._id);
-                alert('Product deleted successfully')
+
             })
             .addCase(deleteProduct.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message;
-                alert(`Product creation failed: ${action.payload.data.message}`)
+
             })
 
     }
