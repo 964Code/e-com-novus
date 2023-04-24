@@ -25,8 +25,6 @@ function ProductForm() {
   const [category, setCategory] = useState(selectedProduct?.category || '');
   const [image, setImage] = useState(selectedProduct?.image || '');
 
-  console.log(selectedProduct);
-
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -62,7 +60,6 @@ function ProductForm() {
   return (
     <section>
       <form onSubmit={onSubmit}>
-        '
         <div
           className='form-group'
           style={{
