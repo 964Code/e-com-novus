@@ -1,7 +1,7 @@
 import * as styled from './styled';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-/* import { createProduct } from '../../features/products/productSlice'; */
+import { createProduct } from '../../features/products/productSlice';
 
 function ProductForm() {
   const [title, setTitle] = useState('');
@@ -15,7 +15,7 @@ function ProductForm() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    /*   dispatch(createProduct({ title, description, price, category, image })); */
+    dispatch(createProduct({ title, description, price, category, image }));
     // reset form
     setTitle('');
     setDescription('');
@@ -89,7 +89,14 @@ function ProductForm() {
             margin: '0 auto',
           }}
         >
-          <button type='submit'>Add product</button>
+          <button
+            type='submit'
+            onClick={() => {
+              onSubmit;
+            }}
+          >
+            Add product
+          </button>
         </div>
       </form>
     </section>

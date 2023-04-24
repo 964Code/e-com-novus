@@ -6,9 +6,9 @@ const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
 const cors = require('cors')
 
-const allowedOrigins = ['http://localhost:5173'];
-
 // CORS middleware, issues with connecting from frontend to backend. This is the fix, don't ask me how it works.
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5000'];
+
 const corsOptions = {
     origin: function (origin, callback) {
         if (allowedOrigins.indexOf(origin) !== -1) {
