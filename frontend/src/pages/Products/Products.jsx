@@ -6,6 +6,7 @@ import {
   deleteProduct,
 } from '../../features/products/productSlice';
 import { Link } from 'react-router-dom';
+import ProductList from '../../components/ProductList/ProductList';
 
 function Products() {
   const products = useSelector(selectProducts);
@@ -17,7 +18,16 @@ function Products() {
   }
 
   return (
-    <div>
+    <>
+      <ProductList products={products} />
+    </>
+  );
+}
+
+export default Products;
+
+{
+  /* <div>
       {products.map((product) => (
         <div key={product._id}>
           <h2>{product.title}</h2>
@@ -36,8 +46,5 @@ function Products() {
           </Link>
         </div>
       ))}
-    </div>
-  );
+    </div> */
 }
-
-export default Products;
