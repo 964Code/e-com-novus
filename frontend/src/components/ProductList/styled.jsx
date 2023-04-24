@@ -5,8 +5,9 @@ export const ProductListContainer = styled.div`
   border: 1px solid red;
   width: 100%;
   height: 100%;
-  margin: 30px 0;
+  margin: 30px auto;
   display: flex;
+  max-width: 1200px;
 `;
 
 export const ProductList = styled.div`
@@ -16,6 +17,14 @@ export const ProductList = styled.div`
   border: 1px solid yellow;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 905px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Product = styled.div`
@@ -41,14 +50,13 @@ export const ProductImage = styled.img`
 export const groupWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const ProductTitle = styled.h2``;
 
-export const ProductDescription = styled.p`
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
+export const ProductDescription = styled.p``;
 
 export const ProductPrice = styled.p``;
 
