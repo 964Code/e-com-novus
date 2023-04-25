@@ -5,6 +5,7 @@ import About from './pages/About/About';
 import Products from './pages/Products/Products';
 import AddProducts from './pages/AddProducts/AddProducts';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
+import Product from './pages/Product/Product';
 import Navbar from './components/Navbar/Navbar.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -32,6 +33,7 @@ function App() {
             path='/products/update_product/:id'
             element={<UpdateProduct />}
           />
+          <Route path='/products/show_more/:id' element={<Product />} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
         </Routes>
       </Router>

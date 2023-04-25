@@ -14,7 +14,7 @@ function ProductList({ products }) {
             <S.Product
               key={product._id}
               onClick={() => {
-                navigate(`/products/${product._id}`);
+                navigate(`/products/show_more/${product._id}`);
               }}
             >
               <S.ProductImageContainer>
