@@ -70,6 +70,8 @@ export const ButtonWrapper = styled.div`
 
 export const ProductTitle = styled.h2`
   line-height: 1.5;
+  padding: 0 10px;
+  text-align: center;
 `;
 
 export const ProductDescription = styled.p``;

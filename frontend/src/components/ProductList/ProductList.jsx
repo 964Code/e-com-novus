@@ -13,7 +13,13 @@ function ProductList({ products }) {
           {products?.map((product) => (
             <S.Product key={product._id}>
               <S.ProductImageContainer>
-                <S.ProductImage src={product.image} alt={product.title} />
+                {/*  <S.ProductImage src={product.image} alt={product.title} /> */}
+                <S.ProductImage
+                  src={
+                    'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
+                  }
+                  alt={product.title}
+                />
               </S.ProductImageContainer>
               <S.TextWrapper>
                 <S.ProductTitle>{product.title}</S.ProductTitle>
