@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ProductListContainer = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   margin: 30px auto;
@@ -11,10 +11,10 @@ export const ProductListContainer = styled.div`
 `;
 
 export const ProductList = styled.div`
+  border: 1px solid yellow;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  border: 1px solid yellow;
+  grid-gap: 30px;
   width: 100%;
   height: 100%;
 
@@ -28,17 +28,17 @@ export const ProductList = styled.div`
 `;
 
 export const Product = styled.div`
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
-  width: 285px;
   height: 510px;
+  width: 285px;
   margin: 0 auto;
 `;
 
 export const ProductImageContainer = styled.div`
+  border-bottom: 1px solid green;
   min-height: 70%;
-  border: 1px solid green;
   min-width: 100%;
 `;
 
@@ -47,20 +47,59 @@ export const ProductImage = styled.img`
   height: 100%;
 `;
 
-export const groupWrapper = styled.div`
+export const TextWrapper = styled.div`
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
 `;
 
-export const ProductTitle = styled.h2``;
+export const ButtonWrapper = styled.div`
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: flex-end;
+  height: 30px;
+  width: 100%;
+`;
+
+export const ProductTitle = styled.h2`
+  line-height: 1.5;
+`;
 
 export const ProductDescription = styled.p``;
 
-export const ProductPrice = styled.p``;
+export const ProductPrice = styled.p`
+  font-weight: bold;
+`;
 
-export const ProductButton = styled.button``;
+export const ProductButton = styled.button`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0;
+
+  //TODO - fix border functionality
+
+  &:first-child {
+    border-right: 2px solid #640e0e;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+
+  &:only-child {
+    border: none;
+  }
+`;
 
 export const ProductLink = styled(Link)``;
 

@@ -3,6 +3,8 @@ import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 
 function ProductList({ products }) {
+  const currency = '$';
+
   const navigate = useNavigate();
   return (
     <>
@@ -13,13 +15,18 @@ function ProductList({ products }) {
               <S.ProductImageContainer>
                 <S.ProductImage src={product.image} alt={product.title} />
               </S.ProductImageContainer>
-              <S.groupWrapper>
+              <S.TextWrapper>
                 <S.ProductTitle>{product.title}</S.ProductTitle>
                 <S.ProductDescription>
-                  {product.description}
+                  {/*  {product.description} */}
                 </S.ProductDescription>
-                <S.ProductPrice>Price: ${product.price}</S.ProductPrice>
-                <S.ProductButton>Buy</S.ProductButton>
+                <S.ProductPrice>
+                  {currency}
+                  {product.price}
+                </S.ProductPrice>
+              </S.TextWrapper>
+              <S.ButtonWrapper>
+                <S.ProductButton>Add to cart</S.ProductButton>
                 <S.ProductButton
                   onClick={() => {
                     navigate(`/products/update_product/${product._id}`);
@@ -27,7 +34,7 @@ function ProductList({ products }) {
                 >
                   Edit
                 </S.ProductButton>
-              </S.groupWrapper>
+              </S.ButtonWrapper>
             </S.Product>
           ))}
         </S.ProductList>
