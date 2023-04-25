@@ -106,3 +106,5 @@ export const ProductButton = styled.button`
 export const ProductLink = styled(Link)``;
 
 export const ProductButtonContainer = styled.div``;
+
+//TODO: Hover effect: see more details when hovering over product that occupies the image space

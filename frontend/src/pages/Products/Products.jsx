@@ -7,6 +7,7 @@ import {
 } from '../../features/products/productSlice';
 import { Link } from 'react-router-dom';
 import ProductList from '../../components/ProductList/ProductList';
+import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
 
 function Products() {
   const products = useSelector(selectProducts);
@@ -19,32 +20,11 @@ function Products() {
 
   return (
     <>
+      <SearchBar />
+      <CategoriesMenu />
       <ProductList products={products} />
     </>
   );
 }
 
 export default Products;
-
-{
-  /* <div>
-      {products.map((product) => (
-        <div key={product._id}>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <p>Price: ${product.price}</p>
-          <img src={product.image} alt={product.title} />
-          <button
-            onClick={() => {
-              dispatch(deleteProduct(product._id));
-            }}
-          >
-            Delete
-          </button>
-          <Link to={`/products/update_product/${product._id}`}>
-            <button onClick={() => {}}>edit</button>
-          </Link>
-        </div>
-      ))}
-    </div> */
-}
