@@ -22,9 +22,13 @@ const CategoriesMenu = () => {
   };
 
   const handleSubcategoryClick = (subcategory) => {
-    navigate(
-      `/products/${selectedCategory.toLowerCase()}/${subcategory.toLowerCase()}`
-    );
+    let path = `/products/${selectedCategory.toLowerCase()}`;
+
+    if (subcategory !== 'all') {
+      path += `/${subcategory.toLowerCase()}`;
+    }
+
+    navigate(path);
   };
 
   const handleClickOutside = (event) => {
