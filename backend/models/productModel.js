@@ -21,6 +21,10 @@ const productSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please provide a category'],
     },
+    subcategory: {
+        type: String,
+        required: [true, 'Please provide a subcategory'],
+    },
 }, { timestamps: true })
 
 module.exports = mongoose.model('Product', productSchema)

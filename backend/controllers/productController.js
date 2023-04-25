@@ -19,9 +19,9 @@ const getProducts = asyncHandler(async (req, res) => {
 // @route  POST /api/products
 // @access Public
 const createProduct = asyncHandler(async (req, res) => {
-    if (!req.body.title || !req.body.description || !req.body.price || !req.body.image || !req.body.category) {
+    if (!req.body.title || !req.body.description || !req.body.price || !req.body.image || !req.body.category || !req.body.subcategory) {
         res.status(400);
-        throw new Error(`Please provide all the required fields. Title, description, price, image and category are required.`);
+        throw new Error(`Please provide all the required fields. Title, description, price, image and category + subcategory are required.`);
     }
 
     const product = await Product.create(req.body);
