@@ -11,7 +11,12 @@ function ProductList({ products }) {
       <S.ProductListContainer>
         <S.ProductList>
           {products?.map((product) => (
-            <S.Product key={product._id}>
+            <S.Product
+              key={product._id}
+              onClick={() => {
+                navigate(`/products/${product._id}`);
+              }}
+            >
               <S.ProductImageContainer>
                 {/*  <S.ProductImage src={product.image} alt={product.title} /> */}
                 <S.ProductImage
@@ -32,9 +37,17 @@ function ProductList({ products }) {
                 </S.ProductPrice>
               </S.TextWrapper>
               <S.ButtonWrapper>
-                <S.ProductButton>Add to cart</S.ProductButton>
                 <S.ProductButton
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log('Add to cart');
+                  }}
+                >
+                  Add to cart
+                </S.ProductButton>
+                <S.ProductButton
+                  onClick={(e) => {
+                    e.stopPropagation();
                     navigate(`/products/update_product/${product._id}`);
                   }}
                 >
