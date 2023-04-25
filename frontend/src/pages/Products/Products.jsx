@@ -20,7 +20,6 @@ function Products() {
 
   return (
     <>
-      <SearchBar />
       <CategoriesMenu />
       <ProductList products={products} />
     </>
