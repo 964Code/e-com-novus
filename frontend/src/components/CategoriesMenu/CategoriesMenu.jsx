@@ -12,16 +12,18 @@ const CategoriesMenu = () => {
 
   const containerRef = useRef(null);
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryClick = (category, event) => {
     if (category === selectedCategory) {
       setShowSubcategories(!showSubcategories);
     } else {
       setSelectedCategory(category);
       setShowSubcategories(true);
     }
+    event.stopPropagation();
   };
 
   const handleSubcategoryClick = (subcategory) => {
+    setShowSubcategories(false);
     let path = `/products/${selectedCategory.toLowerCase()}/${subcategory.toLowerCase()}`;
     navigate(path);
   };
@@ -47,14 +49,7 @@ const CategoriesMenu = () => {
           {Object.entries(categoriesObj).map(([key, value]) => (
             <S.CategoriesMenuItem key={key}>
               <S.CategoriesMenuLink
-                onClick={() => {
-                  if (selectedCategory === key) {
-                    setShowSubcategories(!showSubcategories);
-                  } else {
-                    setSelectedCategory(key);
-                    setShowSubcategories(true);
-                  }
-                }}
+                onClick={(e) => handleCategoryClick(key, e)}
                 active={selectedCategory === key}
               >
                 {value.name}
@@ -85,36 +80,3 @@ const CategoriesMenu = () => {
 };
 
 export default CategoriesMenu;
-
-/* import React from 'react';
-import * as S from './styled';
-import { useNavigate } from 'react-router-dom';
-
-function CategoriesMenu() {
-  const navigate = useNavigate();
-  const categories = ['All', 'Electronics', 'Fashion', 'Home'];
-
-  return (
-    <>
-      <S.CategoriesMenuContainer>
-        <S.CategoriesMenuList>
-          {categories.map((category) => (
-            <S.CategoriesMenuItem key={category}>
-              <S.CategoriesMenuLink
-                onClick={() => {
-                  navigate(`/products/${category.toLowerCase()}`);
-                }}
-              >
-                {category}
-              </S.CategoriesMenuLink>
-            </S.CategoriesMenuItem>
-          ))}
-        </S.CategoriesMenuList>
-      </S.CategoriesMenuContainer>
-      ;
-    </>
-  );
-}
-
-export default CategoriesMenu;
- */

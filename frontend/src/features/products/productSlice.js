@@ -142,3 +142,19 @@ export const selectProducts = (state) => state.products.products;
 export const selectProductById = (state, id) => {
     return state.products.products.find(product => product._id === id);
 };
+
+export const selectProductsByCategory = (state, category, subcategory) => {
+    return state.products.products.filter((product) => {
+        // Filter by category
+        if (product.category !== category) {
+            return false;
+        }
+
+        // Filter by subcategory if it's provided
+        if (subcategory && product.subcategory !== subcategory) {
+            return false;
+        }
+
+        return true;
+    });
+};

@@ -107,4 +107,11 @@ export const ProductLink = styled(Link)``;
 
 export const ProductButtonContainer = styled.div``;
 
+export const NoProductsMessage = styled.div`
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ccc;
+  margin: 2rem auto;
+`;
+
 //TODO: Hover effect: see more details when hovering over product that occupies the image space
