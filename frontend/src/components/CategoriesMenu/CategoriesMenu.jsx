@@ -22,12 +22,7 @@ const CategoriesMenu = () => {
   };
 
   const handleSubcategoryClick = (subcategory) => {
-    let path = `/products/${selectedCategory.toLowerCase()}`;
-
-    if (subcategory !== 'all') {
-      path += `/${subcategory.toLowerCase()}`;
-    }
-
+    let path = `/products/${selectedCategory.toLowerCase()}/${subcategory.toLowerCase()}`;
     navigate(path);
   };
 

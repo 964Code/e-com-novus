@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProducts } from './features/products/productSlice';
 import NavbarTwo from './components/NavbarTwo/NavbarTwo';
+import SelectedCategory from './pages/SelectedCategory/SelectedCategory';
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,10 @@ function App() {
           <Route
             path='/products/update_product/:id'
             element={<UpdateProduct />}
+          />
+          <Route
+            path='/products/:category/:subcategory'
+            element={<SelectedCategory />}
           />
           <Route path='/products/show_more/:id' element={<Product />} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
