@@ -21,7 +21,6 @@ function ProductList({ products }) {
                 }}
               >
                 <S.ProductImageContainer>
-                  {/*  <S.ProductImage src={product.image} alt={product.title} /> */}
                   <S.ProductImage
                     src={
                       'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
@@ -31,9 +30,7 @@ function ProductList({ products }) {
                 </S.ProductImageContainer>
                 <S.TextWrapper>
                   <S.ProductTitle>{product.title}</S.ProductTitle>
-                  <S.ProductDescription>
-                    {/*  {product.description} */}
-                  </S.ProductDescription>
+
                   <S.ProductPrice>
                     {currency}
                     {product.price}
@@ -67,3 +64,10 @@ function ProductList({ products }) {
 }
 
 export default ProductList;
+
+{
+  /* <S.ProductDescription>{product.description}</S.ProductDescription>; */
+}
+{
+  /*  <S.ProductImage src={product.image} alt={product.title} /> */
+}
