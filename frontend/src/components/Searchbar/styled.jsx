@@ -12,6 +12,7 @@ export const SearchBarForm = styled.form`
   border: 2px solid #f0f0f0;
   max-width: 400px;
   box-shadow: 0 0 5px #ccc;
+  margin: 20px 0;
 `;
 
 export const SearchInput = styled.input`

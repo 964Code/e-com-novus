@@ -2,52 +2,56 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Container from '@mui/material/Container';
 import AdbIcon from '@mui/icons-material/Adb';
+import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { IoIosAddCircleOutline } from 'react-icons/io';
+import { BiCart } from 'react-icons/bi';
+import { Badge } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['Add Products', 'Products', 'About'];
+const pages = ['Products', 'About'];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElAdmin, setAnchorElAdmin] = React.useState(null);
+  const [anchorElMenu, setAnchorElMenu] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+  const handleOpenAdminMenu = (event) => {
+    setAnchorElAdmin(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleOpenMenu = (event) => {
+    setAnchorElMenu(event.currentTarget);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleCloseAdminMenu = () => {
+    setAnchorElAdmin(null);
   };
+
+  const handleCloseMenu = () => {
+    setAnchorElMenu(null);
+  };
+
+  // Change this variable to update the cart item count
+  const cartItemCount = 5;
 
   return (
     <AppBar position='static'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon sx={{ mr: 1 }} />
           <Typography
             variant='h6'
             noWrap
-            component='a'
-            href='/'
+            component={Link}
+            to='/'
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -57,68 +61,16 @@ function Navbar() {
           >
             LOGO
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size='large'
-              aria-label='account of current user'
-              aria-controls='menu-appbar'
-              aria-haspopup='true'
-              onClick={handleOpenNavMenu}
-              color='inherit'
-            >
-              <MenuIcon />
-            </IconButton>
-            {/* <Menu
-              id='menu-appbar'
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant='h5'
-            noWrap
-            component='a'
-            href=''
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              display: { xs: 'none', md: 'flex' },
             }}
           >
-            Redux Toolkit
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', ml: 1 }}
               >
                 <Link
                   to={`/${page.replace(/\s/g, '')}`}
@@ -129,11 +81,94 @@ function Navbar() {
               </Button>
             ))}
           </Box>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: { xs: 'flex', md: 'none' },
+            }}
+          >
+            <IconButton
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='menu'
+              sx={{ mr: 2 }}
+              onClick={handleOpenMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id='menu-hamburger'
+              anchorEl={anchorElMenu}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElMenu)}
+              onClose={handleCloseMenu}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseMenu}>
+                  <Link
+                    to={`/${page.replace(/\s/g, '')}`}
+                    style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    {page}
+                  </Link>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
 
-          <Box sx={{ flexGrow: 0 }}></Box>
+          <IconButton
+            size='large'
+            edge='end'
+            color='inherit'
+            aria-label='admin menu'
+            sx={{ mr: 2 }}
+            onClick={handleOpenAdminMenu}
+          >
+            <IoIosAddCircleOutline />
+          </IconButton>
+          <Menu
+            id='menu-admin'
+            anchorEl={anchorElAdmin}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorElAdmin)}
+            onClose={handleCloseAdminMenu}
+          >
+            <MenuItem
+              key='Add Products'
+              onClick={handleCloseAdminMenu}
+              component={Link}
+              to='/addproducts'
+            >
+              Add Products
+            </MenuItem>
+          </Menu>
+
+          <IconButton size='large' edge='end' color='inherit'>
+            <Badge badgeContent={cartItemCount} color='error'>
+              <BiCart />
+            </Badge>
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default Navbar;

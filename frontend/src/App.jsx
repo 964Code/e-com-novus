@@ -10,7 +10,6 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProducts } from './features/products/productSlice';
-import NavbarTwo from './components/NavbarTwo/NavbarTwo';
 import SelectedCategory from './pages/SelectedCategory/SelectedCategory';
 
 function App() {
@@ -23,8 +22,7 @@ function App() {
   return (
     <>
       <Router>
-        {/*  <Navbar /> */}
-        <NavbarTwo />
+        <Navbar />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/addproducts' element={<AddProducts />} />
