@@ -149,6 +149,7 @@ export const CategoriesMenuContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   height: 60px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -190,8 +191,8 @@ export const CategoriesMenuItem = styled.li`
     height: auto;
     margin: 0;
     padding: 10px;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: none;
+    border-bottom: none;
 
     &:first-child {
       border-top: none;
@@ -207,7 +208,7 @@ export const CategoriesMenuLink = styled.a`
   text-decoration: none;
   color: ${(props) => (props.active ? '#000' : '#777')};
   font-size: 1.2rem;
-  font-weight: 500; // Add this line
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
@@ -226,7 +227,7 @@ export const CategoriesMenuLink = styled.a`
     width: 100%;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; // this is the ugly border bottom
     transition: none;
 
     ${(props) =>
