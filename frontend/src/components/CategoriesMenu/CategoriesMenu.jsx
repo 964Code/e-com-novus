@@ -12,14 +12,13 @@ const CategoriesMenu = () => {
 
   const containerRef = useRef(null);
 
-  const handleCategoryClick = (category, event) => {
+  const handleCategoryClick = (category) => {
     if (category === selectedCategory) {
       setShowSubcategories(!showSubcategories);
     } else {
       setSelectedCategory(category);
       setShowSubcategories(true);
     }
-    event.stopPropagation();
   };
 
   const handleSubcategoryClick = (subcategory) => {
@@ -49,8 +48,9 @@ const CategoriesMenu = () => {
           {Object.entries(categoriesObj).map(([key, value]) => (
             <S.CategoriesMenuItem key={key}>
               <S.CategoriesMenuLink
-                onClick={(e) => handleCategoryClick(key, e)}
+                onClick={() => handleCategoryClick(key)}
                 active={selectedCategory === key}
+                showSubcategories={showSubcategories}
               >
                 {value.name}
               </S.CategoriesMenuLink>
