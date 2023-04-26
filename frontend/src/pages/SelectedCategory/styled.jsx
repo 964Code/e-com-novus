@@ -6,15 +6,21 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  padding: 0 20px;
 `;
 
 export const Title = styled.h2`
   font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 `;
 
 export const Message = styled.p`
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   text-align: center;
+  font-weight: 400;
+  color: #777;
 `;
