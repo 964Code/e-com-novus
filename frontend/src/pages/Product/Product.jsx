@@ -14,9 +14,21 @@ function Product() {
 
   if (!selectedProduct) return <h1>Product not found</h1>;
 
-  console.log(selectedProduct);
-  console.log(id);
-  return <div>Product</div>;
+  return (
+    <S.ProductPageContainer>
+      <S.ProductImage src={selectedProduct.image} alt={selectedProduct.title} />
+      <S.ProductDetails>
+        <S.ProductTitle>{selectedProduct.title}</S.ProductTitle>
+        <S.ProductCategory>
+          {selectedProduct.category} - {selectedProduct.subcategory}
+        </S.ProductCategory>
+        <S.ProductDescription>
+          {selectedProduct.description}
+        </S.ProductDescription>
+        <S.ProductPrice>${selectedProduct.price}</S.ProductPrice>
+      </S.ProductDetails>
+    </S.ProductPageContainer>
+  );
 }
 
 export default Product;
