@@ -40,7 +40,8 @@ export const NavItem = styled.li`
 export const DropdownMenu = styled.ul`
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border: 1px solid #e5e5e5;
@@ -48,6 +49,8 @@ export const DropdownMenu = styled.ul`
   margin: 0;
   list-style: none;
   min-width: 150px;
+  width: 500px;
+  z-index: 100;
   display: ${({ open }) => (open ? 'block' : 'none')};
 `;
 
@@ -56,7 +59,10 @@ export const DropdownItem = styled.li`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
+  width: 100%;
   &:hover {
     background-color: #f7f7f7;
   }
