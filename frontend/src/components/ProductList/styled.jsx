@@ -68,16 +68,6 @@ export const TextWrapper = styled.div`
   flex: 1;
 `;
 
-export const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  width: 100%;
-  padding: 0 10px;
-  margin: 0 0 10px 0;
-`;
-
 export const ProductTitle = styled.h2`
   line-height: 1.5;
   padding: 0 10px;
@@ -90,26 +80,51 @@ export const ProductPrice = styled.p`
   font-weight: bold;
 `;
 
-export const ProductButton = styled.button`
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 0 10px 0;
+`;
+
+export const ProductButton = styled.button.attrs((props) => ({
+  className: props.className,
+}))`
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   height: 100%;
-  border: 2px solid #000;
-  border-radius: 5px;
   color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #444;
+  &.addToCart:hover {
+    background-color: #00bf6f;
+  }
+
+  &.edit:hover {
+    background-color: #ff9100;
+  }
+
+  &.delete:hover {
+    background-color: #ff0000;
   }
 
   &:not(:last-child) {
     margin-right: 10px;
   }
+`;
+
+export const ButtonIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: black;
 `;
 
 export const ProductLink = styled(Link)``;
@@ -121,10 +136,4 @@ export const NoProductsMessage = styled.div`
   font-size: 1.5rem;
   color: #ccc;
   margin: 2rem auto;
-`;
-export const ButtonIcon = styled.span`
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.4rem;
-  color: black;
 `;

@@ -14,7 +14,7 @@ function ProductList({ products }) {
   const currency = '$';
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [showEditDelete, setShowEditDelete] = useState(true);
+  const [showEditDelete, setShowEditDelete] = useState(false);
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
@@ -65,28 +65,29 @@ function ProductList({ products }) {
                   </S.ProductPrice>
                 </S.TextWrapper>
                 <S.ButtonWrapper>
-                  <S.ProductButton onClick={(e) => handleAddToCart(e, product)}>
+                  <S.ProductButton
+                    className='addToCart'
+                    onClick={(e) => handleAddToCart(e, product)}
+                  >
                     <S.ButtonIcon as={AiOutlineShoppingCart} />
-                    {/*                     Add to cart
-                     */}{' '}
                   </S.ProductButton>
                   {showEditDelete && (
                     <>
                       <S.ProductButton
+                        className='edit'
                         onClick={(e) => {
                           handleProductEdit(e, product._id);
                         }}
                       >
                         <S.ButtonIcon as={AiOutlineEdit} />
-                        {/* Edit */}
                       </S.ProductButton>
                       <S.ProductButton
+                        className='delete'
                         onClick={(e) => {
                           handleProductDelete(e, product._id);
                         }}
                       >
                         <S.ButtonIcon as={AiOutlineDelete} />
-                        {/* Delete */}
                       </S.ProductButton>
                     </>
                   )}
