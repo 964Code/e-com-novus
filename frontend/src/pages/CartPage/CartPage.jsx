@@ -8,10 +8,10 @@ function CartPage() {
   const modalOpen = useSelector((state) => state.modal.isOpen);
 
   return (
-    <div>
+    <>
       <CartContainer />
       {modalOpen && <Modal />}
-    </div>
+    </>
   );
 }
 
