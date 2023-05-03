@@ -87,10 +87,3 @@ function ProductList({ products }) {
 }
 
 export default ProductList;
-
-{
-  /* <S.ProductDescription>{product.description}</S.ProductDescription>; */
-}
-{
-  /*   */
-}

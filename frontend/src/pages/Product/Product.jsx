@@ -16,7 +16,14 @@ function Product() {
 
   return (
     <S.ProductPageContainer>
-      <S.ProductImage src={selectedProduct.image} alt={selectedProduct.title} />
+      <S.ProductImage
+        src={
+          selectedProduct.image && selectedProduct.image.startsWith('https')
+            ? selectedProduct.image
+            : 'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
+        }
+        alt={selectedProduct.title}
+      />
       <S.ProductDetails>
         <S.ProductTitle>{selectedProduct.title}</S.ProductTitle>
         <S.ProductCategory>
