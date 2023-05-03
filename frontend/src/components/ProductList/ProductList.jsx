@@ -1,10 +1,24 @@
 import React from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../features/cart/cartSlice';
 
 function ProductList({ products }) {
   const currency = '$';
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation();
+    dispatch(addItem(product));
+    console.log('product id: ', product._id);
+  };
+
+  const handleProductEdit = (e, productId) => {
+    e.stopPropagation();
+    navigate(`/products/update_product/${productId}`);
+  };
 
   return (
     <>
@@ -37,18 +51,12 @@ function ProductList({ products }) {
                   </S.ProductPrice>
                 </S.TextWrapper>
                 <S.ButtonWrapper>
-                  <S.ProductButton
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      console.log('Add to cart');
-                    }}
-                  >
+                  <S.ProductButton onClick={(e) => handleAddToCart(e, product)}>
                     Add to cart
                   </S.ProductButton>
                   <S.ProductButton
                     onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(`/products/update_product/${product._id}`);
+                      handleProductEdit(e, product._id);
                     }}
                   >
                     Edit
