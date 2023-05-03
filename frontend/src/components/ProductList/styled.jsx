@@ -56,7 +56,7 @@ export const ProductImageContainer = styled.div`
   width: 100%;
   height: 70%;
   position: relative;
-  /*   border: 1px solid red; */
+  border-bottom: 2px solid #ccc;
 `;
 
 export const ProductImage = styled.img`
@@ -66,6 +66,7 @@ export const ProductImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding: 15px 0;
 `;
 
 export const TextWrapper = styled.div`
