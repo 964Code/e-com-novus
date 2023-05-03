@@ -4,8 +4,9 @@ export const ProductPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto;
+  margin: 25px auto 85px auto;
   max-width: 800px;
+  border: 1px solid red;
 `;
 
 export const ProductImage = styled.img`
