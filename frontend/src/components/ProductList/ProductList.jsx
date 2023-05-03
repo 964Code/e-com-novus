@@ -22,7 +22,8 @@ function ProductList({ products }) {
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
     dispatch(addItem(product));
-    console.log('product id: ', product._id);
+    setSnackbarMessage('Product added to cart!');
+    setSnackbarType('success');
   };
 
   const handleProductEdit = (e, productId) => {

@@ -50,3 +50,25 @@ export const ProductPrice = styled.p`
   font-weight: bold;
   margin-bottom: 10px;
 `;
+
+export const ProductButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+`;
+
+export const ActionButton = styled.button`
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
