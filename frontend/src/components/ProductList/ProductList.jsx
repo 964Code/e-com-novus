@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
 import { deleteProduct } from '../../features/products/productSlice';
+import {
+  AiOutlineShoppingCart,
+  AiOutlineEdit,
+  AiOutlineDelete,
+} from 'react-icons/ai';
 
 function ProductList({ products }) {
   const currency = '$';
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showEditDelete, setShowEditDelete] = useState(true);
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
@@ -60,22 +66,30 @@ function ProductList({ products }) {
                 </S.TextWrapper>
                 <S.ButtonWrapper>
                   <S.ProductButton onClick={(e) => handleAddToCart(e, product)}>
-                    Add to cart
+                    <S.ButtonIcon as={AiOutlineShoppingCart} />
+                    {/*                     Add to cart
+                     */}{' '}
                   </S.ProductButton>
-                  <S.ProductButton
-                    onClick={(e) => {
-                      handleProductEdit(e, product._id);
-                    }}
-                  >
-                    Edit
-                  </S.ProductButton>
-                  <S.ProductButton
-                    onClick={(e) => {
-                      handleProductDelete(e, product._id);
-                    }}
-                  >
-                    Delete
-                  </S.ProductButton>
+                  {showEditDelete && (
+                    <>
+                      <S.ProductButton
+                        onClick={(e) => {
+                          handleProductEdit(e, product._id);
+                        }}
+                      >
+                        <S.ButtonIcon as={AiOutlineEdit} />
+                        {/* Edit */}
+                      </S.ProductButton>
+                      <S.ProductButton
+                        onClick={(e) => {
+                          handleProductDelete(e, product._id);
+                        }}
+                      >
+                        <S.ButtonIcon as={AiOutlineDelete} />
+                        {/* Delete */}
+                      </S.ProductButton>
+                    </>
+                  )}
                 </S.ButtonWrapper>
               </S.Product>
             ))}

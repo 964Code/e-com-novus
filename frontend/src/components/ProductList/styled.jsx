@@ -41,17 +41,6 @@ export const Product = styled.div`
   }
 `;
 
-/* export const ProductImageContainer = styled.div`
-  min-height: 70%;
-  min-width: 100%;
-`;
-
-export const ProductImage = styled.img`
-  width: 100%;
-  height: 100%;
-`;
- */
-
 export const ProductImageContainer = styled.div`
   width: 100%;
   height: 70%;
@@ -86,6 +75,7 @@ export const ButtonWrapper = styled.div`
   height: 30px;
   width: 100%;
   padding: 0 10px;
+  margin: 0 0 10px 0;
 `;
 
 export const ProductTitle = styled.h2`
@@ -102,11 +92,12 @@ export const ProductPrice = styled.p`
 
 export const ProductButton = styled.button`
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
+  flex: 1;
   height: 100%;
-  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -116,7 +107,7 @@ export const ProductButton = styled.button`
     background-color: #444;
   }
 
-  &:first-child {
+  &:not(:last-child) {
     margin-right: 10px;
   }
 `;
@@ -130,4 +121,10 @@ export const NoProductsMessage = styled.div`
   font-size: 1.5rem;
   color: #ccc;
   margin: 2rem auto;
+`;
+export const ButtonIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: black;
 `;
