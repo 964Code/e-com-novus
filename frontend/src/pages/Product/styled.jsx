@@ -10,15 +10,20 @@ export const ProductPageContainer = styled.div`
 
 export const ProductImage = styled.img`
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: 400px;
+  object-fit: contain;
   margin-bottom: 30px;
+
+  @media (max-width: 600px) {
+    height: 300px;
+  }
 `;
 
 export const ProductDetails = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: center;
 `;
 
 export const ProductTitle = styled.h1`
@@ -37,6 +42,7 @@ export const ProductDescription = styled.p`
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 20px;
+  padding: 0 15px;
 `;
 
 export const ProductPrice = styled.p`
