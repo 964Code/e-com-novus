@@ -26,7 +26,7 @@ const CartContainer = () => {
       </S.CartHeader>
       <S.CartItems>
         {cartItems.map((item) => {
-          return <CartItem key={item.id} {...item} />;
+          return <CartItem key={item._id} {...item} />;
         })}
       </S.CartItems>
       <S.CartFooter>
