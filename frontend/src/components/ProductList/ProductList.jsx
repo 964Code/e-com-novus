@@ -3,6 +3,7 @@ import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
+import { deleteProduct } from '../../features/products/productSlice';
 
 function ProductList({ products }) {
   const currency = '$';
@@ -18,6 +19,11 @@ function ProductList({ products }) {
   const handleProductEdit = (e, productId) => {
     e.stopPropagation();
     navigate(`/products/update_product/${productId}`);
+  };
+
+  const handleProductDelete = (e, productId) => {
+    e.stopPropagation();
+    dispatch(deleteProduct(productId));
   };
 
   return (
@@ -62,6 +68,13 @@ function ProductList({ products }) {
                     }}
                   >
                     Edit
+                  </S.ProductButton>
+                  <S.ProductButton
+                    onClick={(e) => {
+                      handleProductDelete(e, product._id);
+                    }}
+                  >
+                    Delete
                   </S.ProductButton>
                 </S.ButtonWrapper>
               </S.Product>
