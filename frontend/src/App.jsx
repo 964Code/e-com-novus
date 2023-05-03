@@ -7,12 +7,12 @@ import AddProducts from './pages/AddProducts/AddProducts';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import Product from './pages/Product/Product';
 import CartPage from './pages/CartPage/CartPage';
-import Navbar from './components/Navbar/Navbar.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProducts } from './features/products/productSlice';
 import SelectedCategory from './pages/SelectedCategory/SelectedCategory';
 import NewNavbar from './components/NewNavbar/NewNavbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +42,7 @@ function App() {
           <Route path='/cart' element={<CartPage />} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

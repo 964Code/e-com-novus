@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const ProductListContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: 30px auto;
+  margin: 30px auto 90px auto;
   display: flex;
   max-width: 1200px;
 `;
@@ -20,7 +20,7 @@ export const ProductList = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
