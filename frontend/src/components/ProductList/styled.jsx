@@ -41,7 +41,7 @@ export const Product = styled.div`
   }
 `;
 
-export const ProductImageContainer = styled.div`
+/* export const ProductImageContainer = styled.div`
   min-height: 70%;
   min-width: 100%;
 `;
@@ -49,6 +49,23 @@ export const ProductImageContainer = styled.div`
 export const ProductImage = styled.img`
   width: 100%;
   height: 100%;
+`;
+ */
+
+export const ProductImageContainer = styled.div`
+  width: 100%;
+  height: 70%;
+  position: relative;
+  /*   border: 1px solid red; */
+`;
+
+export const ProductImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const TextWrapper = styled.div`

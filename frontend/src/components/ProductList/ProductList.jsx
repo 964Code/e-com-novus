@@ -37,7 +37,9 @@ function ProductList({ products }) {
                 <S.ProductImageContainer>
                   <S.ProductImage
                     src={
-                      'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
+                      product.image && product.image.startsWith('https')
+                        ? product.image
+                        : 'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
                     }
                     alt={product.title}
                   />
@@ -77,5 +79,5 @@ export default ProductList;
   /* <S.ProductDescription>{product.description}</S.ProductDescription>; */
 }
 {
-  /*  <S.ProductImage src={product.image} alt={product.title} /> */
+  /*   */
 }
