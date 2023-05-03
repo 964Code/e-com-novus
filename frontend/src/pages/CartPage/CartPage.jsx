@@ -10,7 +10,7 @@ function CartPage() {
   return (
     <>
       <CartContainer />
-      {modalOpen && <Modal />}
+      {modalOpen && <Modal text={'Are you sure you want to clear the cart?'} />}
     </>
   );
 }

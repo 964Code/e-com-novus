@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux';
 import { clearCart } from '../../features/cart/cartSlice';
 import * as S from './styled';
 
-function Modal() {
+function Modal({ text }) {
   const dispatch = useDispatch();
   return (
     <S.ModalContainer>
       <S.ModalContent>
-        <S.ModalText>Are you sure you want to clear your cart?</S.ModalText>
+        <S.ModalText>{text}</S.ModalText>
         <S.ButtonContainer>
           <S.ConfirmButton
             type='button'
