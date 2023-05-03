@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+//TODO: FIX STYLING
 export const ModalContainer = styled.aside`
   position: fixed;
   top: 0;
@@ -14,36 +15,40 @@ export const ModalContainer = styled.aside`
 `;
 
 export const ModalContent = styled.div`
-  width: 90vw;
+  width: 80vw;
   max-width: 20rem;
-  background: grey;
+  background: #fff;
   border-radius: 0.25rem;
   padding: 1.5rem 1.25rem;
   text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 `;
 
 export const ModalText = styled.h4`
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 `;
 
 export const ConfirmButton = styled.button`
   text-transform: uppercase;
-  background: hsl(360, 67%, 44%);
+  background: #ff4343;
   padding: 0.5rem 1rem;
   color: #fff;
-  border: 1px solid hsl(360, 67%, 44%);
+  border: none;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.3s linear;
 
   &:hover {
-    background: hsl(360, 71%, 66%);
-    border-color: hsl(360, 71%, 66%);
+    background: #ff6b6b;
   }
 `;
 
@@ -51,15 +56,13 @@ export const CancelButton = styled.button`
   text-transform: uppercase;
   background: transparent;
   padding: 0.5rem 1rem;
-  color: hsl(360, 67%, 44%);
-  border: 1px solid hsl(360, 67%, 44%);
+  color: #333;
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.3s linear;
 
   &:hover {
-    background: hsl(360, 71%, 66%);
-    color: hsl(360, 67%, 44%);
-    border-color: hsl(360, 71%, 66%);
+    background: #ccc;
   }
 `;

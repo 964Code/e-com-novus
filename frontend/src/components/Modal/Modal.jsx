@@ -7,32 +7,30 @@ import * as S from './styled';
 function Modal() {
   const dispatch = useDispatch();
   return (
-    <aside className='modal-container'>
-      <div className='modal' style={{ backgroundColor: 'grey' }}>
-        <h4>modal content</h4>
-        <div className='btn-container'>
-          <button
+    <S.ModalContainer>
+      <S.ModalContent>
+        <S.ModalText>Are you sure you want to clear your cart?</S.ModalText>
+        <S.ButtonContainer>
+          <S.ConfirmButton
             type='button'
-            className='btn confirm-btn'
             onClick={() => {
               dispatch(clearCart());
               dispatch(closeModal());
             }}
           >
             Confirm
-          </button>
-          <button
+          </S.ConfirmButton>
+          <S.CancelButton
             type='button'
-            className='btn cancel-btn'
             onClick={() => {
               dispatch(closeModal());
             }}
           >
             cancel
-          </button>
-        </div>
-      </div>
-    </aside>
+          </S.CancelButton>
+        </S.ButtonContainer>
+      </S.ModalContent>
+    </S.ModalContainer>
   );
 }
 
