@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
+import { RiDeleteBin7Line } from 'react-icons/ri';
 
 export const SearchBarForm = styled.form`
   display: flex;
@@ -38,4 +39,9 @@ export const SearchButton = styled.button`
 export const SearchIcon = styled(FaSearch)`
   color: #333;
   font-size: 1.2rem;
+`;
+
+export const SearchIconClear = styled(RiDeleteBin7Line)`
+  color: #333;
+  font-size: 1.5rem;
 `;

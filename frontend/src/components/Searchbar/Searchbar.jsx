@@ -9,6 +9,11 @@ function SearchBar({ onSearch }) {
     onSearch(searchTerm);
   };
 
+  const handleClear = () => {
+    setSearchTerm('');
+    onSearch('');
+  };
+
   return (
     <S.SearchBarForm onSubmit={handleSearch}>
       <S.SearchInput
@@ -17,6 +22,11 @@ function SearchBar({ onSearch }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      {searchTerm && (
+        <S.SearchButton type='submit'>
+          <S.SearchIconClear onClick={handleClear} />
+        </S.SearchButton>
+      )}
       <S.SearchButton type='submit'>
         <S.SearchIcon />
       </S.SearchButton>
