@@ -70,7 +70,7 @@ export const CartContainer = styled.div`
 `;
 
 export const CartIcon = styled(AiOutlineShoppingCart)`
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #000;
 `;
 
