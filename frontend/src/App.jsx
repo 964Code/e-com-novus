@@ -25,7 +25,6 @@ function App() {
     <>
       <Router>
         <NewNavbar />
-        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/addproducts' element={<AddProducts />} />

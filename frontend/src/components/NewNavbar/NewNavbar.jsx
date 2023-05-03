@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -16,6 +16,19 @@ const NewNavbar = () => {
     navigate('/cart');
   };
 
+  useEffect(() => {
+    const handleClickOutsideDropdown = (event) => {
+      if (!event.target.closest('.dropdown')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutsideDropdown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsideDropdown);
+    };
+  }, []);
+
   return (
     <S.NavbarContainer>
       <S.Navbar>
@@ -23,10 +36,10 @@ const NewNavbar = () => {
         <S.NavItemList>
           <S.NavItem onClick={() => navigate('/products')}>Products</S.NavItem>
           <S.NavItem onClick={() => navigate('/about')}>About</S.NavItem>
-          <S.NavItem onClick={toggleDropdown}>
+          <S.NavItem className='dropdown' onClick={toggleDropdown}>
             Admin
-            <S.DropdownMenu open={isDropdownOpen}>
-              <S.DropdownItem onClick={() => navigate('/addproduct')}>
+            <S.DropdownMenu className='dropdown' open={isDropdownOpen}>
+              <S.DropdownItem onClick={() => navigate('/addproducts')}>
                 Add Product
               </S.DropdownItem>
               <S.DropdownItem onClick={() => navigate('/adminmode')}>
