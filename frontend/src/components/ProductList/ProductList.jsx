@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
 import { deleteProduct } from '../../features/products/productSlice';
+import Snackbar from '../Snackbar/Snackbar';
 import {
   AiOutlineShoppingCart,
   AiOutlineEdit,
@@ -11,10 +12,12 @@ import {
 } from 'react-icons/ai';
 
 function ProductList({ products }) {
+  const [showEditDelete, setShowEditDelete] = useState(true);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarType, setSnackbarType] = useState('');
   const currency = '$';
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [showEditDelete, setShowEditDelete] = useState(false);
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
@@ -27,13 +30,21 @@ function ProductList({ products }) {
     navigate(`/products/update_product/${productId}`);
   };
 
-  const handleProductDelete = (e, productId) => {
+  const handleProductDelete = async (e, productId) => {
     e.stopPropagation();
-    dispatch(deleteProduct(productId));
+    const res = await dispatch(deleteProduct(productId));
+    if (res.error) {
+      setSnackbarMessage('Error deleting product.');
+      setSnackbarType('error');
+    } else {
+      setSnackbarMessage('Product deleted successfully!');
+      setSnackbarType('success');
+    }
   };
 
   return (
     <>
+      <Snackbar type={snackbarType} message={snackbarMessage} />
       <S.ProductListContainer>
         {products.length === 0 ? (
           <S.NoProductsMessage>No products found</S.NoProductsMessage>
