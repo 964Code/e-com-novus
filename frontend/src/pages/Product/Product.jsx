@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import * as S from './styled';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
+
 import {
   deleteProduct,
   selectProductById,
@@ -19,6 +20,8 @@ import { useNavigate } from 'react-router-dom';
 import Snackbar from '../../components/Snackbar/Snackbar';
 
 function Product() {
+  const admin = useSelector((state) => state.global.isToggleOn);
+  console.log(admin);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
   const { id } = useParams();
@@ -79,10 +82,16 @@ function Product() {
             <S.ActionButton onClick={handleAddToCart}>
               Add to Cart
             </S.ActionButton>
-            <S.ActionButton onClick={handleEditProduct}>Edit</S.ActionButton>
-            <S.ActionButton onClick={handleDeleteProduct}>
-              Delete
-            </S.ActionButton>
+            {admin && (
+              <>
+                <S.ActionButton onClick={handleEditProduct}>
+                  Edit
+                </S.ActionButton>
+                <S.ActionButton onClick={handleDeleteProduct}>
+                  Delete
+                </S.ActionButton>
+              </>
+            )}
           </S.ProductButtons>
         </S.ProductDetails>
       </S.ProductPageContainer>

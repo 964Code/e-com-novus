@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
 import { deleteProduct } from '../../features/products/productSlice';
 import Snackbar from '../Snackbar/Snackbar';
@@ -12,7 +12,7 @@ import {
 } from 'react-icons/ai';
 
 function ProductList({ products }) {
-  const [showEditDelete, setShowEditDelete] = useState(true);
+  const admin = useSelector((state) => state.global.isToggleOn);
   const [refresh, setRefresh] = React.useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
@@ -97,7 +97,7 @@ function ProductList({ products }) {
                     >
                       <S.ButtonIcon as={AiOutlineShoppingCart} />
                     </S.ProductButton>
-                    {showEditDelete && (
+                    {admin && (
                       <>
                         <S.ProductButton
                           className='edit'

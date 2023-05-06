@@ -2,15 +2,21 @@ import React, { useState, useEffect } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 import { selectCartAmount } from '../../features/cart/cartSlice';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleAdmin } from '../../features/global/globalSlice';
 
 const NewNavbar = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const amount = useSelector(selectCartAmount);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleAdminMode = () => {
+    dispatch(toggleAdmin());
   };
 
   const handleCartClick = () => {
@@ -43,7 +49,7 @@ const NewNavbar = () => {
               <S.DropdownItem onClick={() => navigate('/addproducts')}>
                 Add Product
               </S.DropdownItem>
-              <S.DropdownItem onClick={() => navigate('/adminmode')}>
+              <S.DropdownItem onClick={handleAdminMode}>
                 Admin Mode
               </S.DropdownItem>
             </S.DropdownMenu>
