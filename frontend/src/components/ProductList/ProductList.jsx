@@ -1,15 +1,28 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../features/cart/cartSlice';
+import { deleteProduct } from '../../features/products/productSlice';
+import Snackbar from '../Snackbar/Snackbar';
+import {
+  AiOutlineShoppingCart,
+  AiOutlineEdit,
+  AiOutlineDelete,
+} from 'react-icons/ai';
 
 function ProductList({ products }) {
-  const [showEditDelete, setShowEditDelete] = React.useState(true);
-  const [snackbarMessage, setSnackbarMessage] = React.useState('');
-  const [snackbarType, setSnackbarType] = React.useState('');
-  const [visibleProducts, setVisibleProducts] = React.useState(9); // Show 9 products at first
+  const [showEditDelete, setShowEditDelete] = useState(true);
+  const [refresh, setRefresh] = React.useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarType, setSnackbarType] = useState('');
+  const [visibleProducts, setVisibleProducts] = useState(9);
   const currency = '$';
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLoadMore = () => {
-    setVisibleProducts(products.length); // Show all products
+    setVisibleProducts(products.length);
   };
 
   const handleAddToCart = (e, product) => {
@@ -33,11 +46,19 @@ function ProductList({ products }) {
     } else {
       setSnackbarMessage('Product deleted successfully!');
       setSnackbarType('success');
+
+      setRefresh(!refresh);
     }
   };
 
+  // useffect to refresh page is setRefresh changed
+  useEffect(() => {
+    console.log('refreshing');
+  }, [refresh]);
+
   return (
     <>
+      <Snackbar type={snackbarType} message={snackbarMessage} />
       <S.ProductListContainer>
         {products.length === 0 ? (
           <S.NoProductsMessage>No products found</S.NoProductsMessage>
@@ -74,7 +95,7 @@ function ProductList({ products }) {
                       className='addToCart'
                       onClick={(e) => handleAddToCart(e, product)}
                     >
-                      Add to Cart
+                      <S.ButtonIcon as={AiOutlineShoppingCart} />
                     </S.ProductButton>
                     {showEditDelete && (
                       <>
@@ -84,7 +105,7 @@ function ProductList({ products }) {
                             handleProductEdit(e, product._id);
                           }}
                         >
-                          Edit
+                          <S.ButtonIcon as={AiOutlineEdit} />
                         </S.ProductButton>
                         <S.ProductButton
                           className='delete'
@@ -92,7 +113,7 @@ function ProductList({ products }) {
                             handleProductDelete(e, product._id);
                           }}
                         >
-                          Delete
+                          <S.ButtonIcon as={AiOutlineDelete} />
                         </S.ProductButton>
                       </>
                     )}
@@ -101,11 +122,9 @@ function ProductList({ products }) {
               ))}
             </S.ProductList>
             {visibleProducts < products.length && (
-              <S.LoadMoreContainer>
-                <S.LoadMoreButton onClick={handleLoadMore}>
-                  Load More
-                </S.LoadMoreButton>
-              </S.LoadMoreContainer>
+              <S.LoadMoreButton onClick={handleLoadMore}>
+                Load more
+              </S.LoadMoreButton>
             )}
           </>
         )}
