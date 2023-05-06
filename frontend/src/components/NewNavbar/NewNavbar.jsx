@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
+import { selectCartAmount } from '../../features/cart/cartSlice';
 import { useSelector } from 'react-redux';
 
 const NewNavbar = () => {
   const navigate = useNavigate();
-  const cartItemCount = useSelector((state) => state.cart.amount);
+  const amount = useSelector(selectCartAmount);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -50,7 +51,7 @@ const NewNavbar = () => {
         </S.NavItemList>
         <S.CartContainer onClick={handleCartClick}>
           <S.CartIcon />
-          <S.CartCount>{cartItemCount}</S.CartCount>
+          <S.CartCount>{amount}</S.CartCount>
         </S.CartContainer>
       </S.Navbar>
     </S.NavbarContainer>

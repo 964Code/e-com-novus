@@ -66,6 +66,11 @@ const cartSlice = createSlice({
     },
 });
 
+export const selectCartAmount = (state) => {
+    const cartItems = loadCartItemsFromLocalStorage();
+    return cartItems.reduce((total, item) => total + item.amount, 0);
+};
+
 export const { clearCart, addItem, removeItem, increase, decrease } =
     cartSlice.actions;
 

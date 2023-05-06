@@ -2,10 +2,12 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { openModal } from '../../features/modal/modalSlice';
 import CartItem from '../CartItem/CartItems';
+import { selectCartAmount } from '../../features/cart/cartSlice';
 import * as S from './styled';
 
 const CartContainer = () => {
-  const { cartItems, amount, total } = useSelector((state) => state.cart);
+  const { cartItems, total } = useSelector((state) => state.cart);
+  const amount = useSelector(selectCartAmount);
   const dispatch = useDispatch();
 
   if (amount < 1) {
