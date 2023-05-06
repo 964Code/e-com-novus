@@ -10,6 +10,7 @@ const NewNavbar = () => {
   const navigate = useNavigate();
   const amount = useSelector(selectCartAmount);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const admin = useSelector((state) => state.global.isToggleOn);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -46,9 +47,12 @@ const NewNavbar = () => {
           <S.NavItem className='dropdown' onClick={toggleDropdown}>
             Admin
             <S.DropdownMenu className='dropdown' open={isDropdownOpen}>
-              <S.DropdownItem onClick={() => navigate('/addproducts')}>
-                Add Product
-              </S.DropdownItem>
+              {admin && (
+                <S.DropdownItem onClick={() => navigate('/addproducts')}>
+                  Add Product
+                </S.DropdownItem>
+              )}
+
               <S.DropdownItem onClick={handleAdminMode}>
                 Admin Mode
               </S.DropdownItem>

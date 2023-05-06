@@ -21,7 +21,6 @@ import Snackbar from '../../components/Snackbar/Snackbar';
 
 function Product() {
   const admin = useSelector((state) => state.global.isToggleOn);
-  console.log(admin);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
   const { id } = useParams();
