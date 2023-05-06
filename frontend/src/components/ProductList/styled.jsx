@@ -6,6 +6,7 @@ export const ProductListContainer = styled.div`
   height: 100%;
   margin: 30px auto 90px auto;
   display: flex;
+  flex-direction: column;
   max-width: 1200px;
 `;
 
@@ -136,4 +137,34 @@ export const NoProductsMessage = styled.div`
   font-size: 1.5rem;
   color: #ccc;
   margin: 2rem auto;
+`;
+
+export const LoadMoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  flex-grow: 1;
+`;
+export const LoadMoreButton = styled.button`
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  background-color: transparent;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
 `;
