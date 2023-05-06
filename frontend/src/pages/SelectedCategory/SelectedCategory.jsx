@@ -20,6 +20,7 @@ function SelectedCategory() {
   );
 
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [sortOrder, setSortOrder] = React.useState('lowToHigh');
 
   let filteredProducts = products;
 
@@ -29,11 +30,27 @@ function SelectedCategory() {
     });
   }
 
+  if (sortOrder === 'lowToHigh') {
+    filteredProducts.sort((a, b) => a.price - b.price);
+  } else if (sortOrder === 'highToLow') {
+    filteredProducts.sort((a, b) => b.price - a.price);
+  }
+
   return (
     <>
       <S.MainContainer>
         <CategoriesMenu />
         <SearchBar onSearch={setSearchTerm} />
+        <S.SortContainer>
+          <S.SortLabel>Sort by price:</S.SortLabel>
+          <S.SortSelect
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+          >
+            <option value='lowToHigh'>Low to high</option>
+            <option value='highToLow'>High to low</option>
+          </S.SortSelect>
+        </S.SortContainer>
         <S.Container>
           <S.Title>
             {category} {subcategory && `> ${subcategory}`}
