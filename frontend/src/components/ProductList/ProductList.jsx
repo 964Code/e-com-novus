@@ -94,6 +94,7 @@ function ProductList({ products }) {
                     <S.ProductButton
                       className='addToCart'
                       onClick={(e) => handleAddToCart(e, product)}
+                      aria-label='Add to cart'
                     >
                       <S.ButtonIcon as={AiOutlineShoppingCart} />
                     </S.ProductButton>
@@ -104,6 +105,7 @@ function ProductList({ products }) {
                           onClick={(e) => {
                             handleProductEdit(e, product._id);
                           }}
+                          aria-label='Edit product'
                         >
                           <S.ButtonIcon as={AiOutlineEdit} />
                         </S.ProductButton>
@@ -112,6 +114,7 @@ function ProductList({ products }) {
                           onClick={(e) => {
                             handleProductDelete(e, product._id);
                           }}
+                          aria-label='Delete product'
                         >
                           <S.ButtonIcon as={AiOutlineDelete} />
                         </S.ProductButton>

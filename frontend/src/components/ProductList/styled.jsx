@@ -35,6 +35,7 @@ export const Product = styled.div`
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  border: 2.5px solid #c1c1c1;
   overflow: hidden;
 
   @media (max-width: 350px) {
@@ -46,17 +47,17 @@ export const ProductImageContainer = styled.div`
   width: 100%;
   height: 70%;
   position: relative;
-  border-bottom: 2px solid #ccc;
+  background-color: #fff;
 `;
 
 export const ProductImage = styled.img`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 15px 0;
+  padding: 0 0 15px 0;
+  max-height: 100%;
+  object-position: top;
 `;
 
 export const TextWrapper = styled.div`
@@ -66,12 +67,12 @@ export const TextWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 10px;
   flex: 1;
 `;
 
 export const ProductTitle = styled.h2`
-  line-height: 1.5;
-  padding: 0 10px;
+  line-height: 1.3;
   text-align: center;
 `;
 
@@ -101,18 +102,19 @@ export const ProductButton = styled.button.attrs((props) => ({
   height: 100%;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
-  &.addToCart:hover {
-    background-color: #00bf6f;
+  &.addToCart {
+    background-color: #42bb00;
   }
 
-  &.edit:hover {
+  &.edit {
     background-color: #ff9100;
   }
 
-  &.delete:hover {
+  &.delete {
     background-color: #ff0000;
   }
 
