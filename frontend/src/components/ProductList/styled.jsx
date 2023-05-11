@@ -35,7 +35,7 @@ export const Product = styled.div`
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  border: 2.5px solid #c1c1c1;
+  border: 2.5px solid #e5e5e5;
   overflow: hidden;
 
   @media (max-width: 350px) {

@@ -7,12 +7,12 @@ import {
 import { removeItem, increase, decrease } from '../../features/cart/cartSlice';
 import * as S from './styled';
 
-const CartItem = ({ _id, img, title, price, amount }) => {
+const CartItem = ({ _id, image, title, price, amount }) => {
   const dispatch = useDispatch();
 
   return (
     <S.CartItemWrapper>
-      <S.CartItemImage src={img} alt={title} />
+      <S.CartItemImage src={image} alt={title} />
       <S.CartItemInfo>
         <S.CartItemTitle>{title}</S.CartItemTitle>
         <S.ItemPrice>${price}</S.ItemPrice>
