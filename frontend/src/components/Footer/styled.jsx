@@ -10,6 +10,7 @@ export const FooterContainer = styled.footer`
   left: 0;
   right: 0;
   height: 60px;
+  padding: 0 20px;
   border-top: 1px solid #ccc;
 `;
 

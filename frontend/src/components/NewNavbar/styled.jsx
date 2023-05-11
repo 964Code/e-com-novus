@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { FiMenu } from 'react-icons/fi';
+import { FiX } from 'react-icons/fi';
 
 export const NavbarContainer = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -32,6 +34,18 @@ export const NavItemList = styled.ol`
   list-style: none;
   width: 100%;
   justify-content: space-evenly;
+
+  @media (max-width: 450px) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    display: ${({ open }) => (open ? 'flex' : 'none')};
+    z-index: 100;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -49,6 +63,13 @@ export const NavItem = styled.li`
   }
   &:hover {
     background-color: #f7f7f7;
+  }
+
+  @media (max-width: 450px) {
+    &:not(:last-child) {
+      border-right: none;
+    }
+    margin: 0 auto;
   }
 `;
 
@@ -81,6 +102,11 @@ export const DropdownItem = styled.li`
   &:hover {
     background-color: #f7f7f7;
   }
+
+  @media (max-width: 450px) {
+    font-size: 1.2rem;
+    display: block;
+  }
 `;
 
 export const CartContainer = styled.div`
@@ -105,4 +131,29 @@ export const CartCount = styled.span`
   font-weight: bold;
   padding: 3px 6px;
   border-radius: 50%;
+`;
+
+export const HamburgerIcon = styled(({ open, ...props }) =>
+  open ? <FiX {...props} /> : <FiMenu {...props} />
+)`
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+
+  @media (max-width: 450px) {
+    display: block;
+  }
+`;
+
+export const StyledFlexWrapper = styled.div`
+  display: none;
+  align-items: center;
+  border: 1px solid red;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media (max-width: 450px) {
+    display: flex;
+  }
 `;

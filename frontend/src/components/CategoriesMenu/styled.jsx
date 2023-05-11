@@ -7,6 +7,7 @@ export const CategoriesMenuContainer = styled.div`
   margin: 20px auto;
   width: 100%;
   max-width: 1200px;
+  background-color: #fff;
   border: 2.5px solid #e5e5e5;
   border-radius: 5px;
   height: 60px;
@@ -23,6 +24,7 @@ export const CategoriesMenuList = styled.ol`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  background-color: #fff;
   height: 100%;
 
   @media screen and (max-width: 768px) {
