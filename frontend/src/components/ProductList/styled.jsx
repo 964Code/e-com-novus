@@ -10,7 +10,7 @@ export const ProductListContainer = styled.div`
   max-width: 1200px;
 `;
 
-export const ProductList = styled.div`
+/* export const ProductList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
@@ -25,6 +25,24 @@ export const ProductList = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
+ */
+
+export const ProductList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  grid-gap: 30px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  @media (max-width: 905px) {
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  }
+`;
 
 export const Product = styled.div`
   display: flex;
@@ -32,7 +50,7 @@ export const Product = styled.div`
   height: 510px;
   width: 285px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   border: 2.5px solid #e5e5e5;
