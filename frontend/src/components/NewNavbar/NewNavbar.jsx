@@ -40,7 +40,7 @@ const NewNavbar = () => {
   return (
     <S.NavbarContainer>
       <S.Navbar>
-        <S.Logo onClick={() => navigate('/')}>Logo</S.Logo>
+        <S.Logo onClick={() => navigate('/')}>UM</S.Logo>
         <S.NavItemList>
           <S.NavItem onClick={() => navigate('/products')}>Products</S.NavItem>
           <S.NavItem onClick={() => navigate('/about')}>About</S.NavItem>

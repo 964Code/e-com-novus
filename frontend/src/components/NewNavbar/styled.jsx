@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 export const NavbarContainer = styled.div`
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   background-color: white;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 2.5px solid #e5e5e5;
 `;
 
 export const Navbar = styled.nav`
@@ -24,20 +26,32 @@ export const Logo = styled.h1`
   cursor: pointer;
 `;
 
-export const NavItemList = styled.ul`
+export const NavItemList = styled.ol`
   display: flex;
   list-style: none;
+  width: 100%;
+  justify-content: space-evenly;
 `;
 
 export const NavItem = styled.li`
   position: relative;
   padding: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
+  width: 90%;
+  text-align: center;
+  font-variant: small-caps;
+
+  &:not(:last-child) {
+    border-right: 2px solid #e5e5e5;
+  }
+  &:hover {
+    background-color: #f7f7f7;
+  }
 `;
 
-export const DropdownMenu = styled.ul`
+export const DropdownMenu = styled.ol`
   position: absolute;
   top: 100%;
   left: 50%;
@@ -90,4 +104,18 @@ export const CartCount = styled.span`
   font-weight: bold;
   padding: 3px 6px;
   border-radius: 50%;
+`;
+
+export const MobileMenuButton = styled.button`
+  display: none;
+
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 `;

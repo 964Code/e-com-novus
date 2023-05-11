@@ -7,7 +7,7 @@ export const CategoriesMenuContainer = styled.div`
   margin: 20px auto;
   width: 100%;
   max-width: 1200px;
-  border: 2.5px solid #c3c3c3;
+  border: 2.5px solid #e5e5e5;
   border-radius: 5px;
   height: 60px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
