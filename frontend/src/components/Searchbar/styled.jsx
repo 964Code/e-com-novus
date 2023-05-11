@@ -6,7 +6,7 @@ export const SearchBarForm = styled.form`
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
-  background-color: #fafafa;
+  background-color: #f0f7fa;
   border-radius: 5px;
   padding: 5px 10px;
   width: 100%;

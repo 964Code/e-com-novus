@@ -7,6 +7,8 @@ export const CategoriesMenuContainer = styled.div`
   margin: 20px auto;
   width: 100%;
   max-width: 1200px;
+  border: 2.5px solid #c3c3c3;
+  border-radius: 5px;
   height: 60px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 
@@ -16,7 +18,7 @@ export const CategoriesMenuContainer = styled.div`
   }
 `;
 
-export const CategoriesMenuList = styled.ul`
+export const CategoriesMenuList = styled.ol`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -37,6 +39,7 @@ export const CategoriesMenuItem = styled.li`
   align-items: center;
   width: 100%;
   height: 100%;
+  color: #bbb;
   list-style: none;
   cursor: pointer;
 
@@ -52,7 +55,7 @@ export const CategoriesMenuItem = styled.li`
     padding: 10px;
     border-top: none;
     border-bottom: none;
-    border: 1px solid #e5e5e5;
+    border-bottom: 1px solid #c3c3c3;
 
     &:first-child {
       border-top: none;
@@ -74,12 +77,12 @@ export const CategoriesMenuLink = styled.a`
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: 100%;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover {
-    color: #000;
   }
 
   @media screen and (max-width: 768px) {
@@ -129,15 +132,14 @@ export const CategoriesSubMenuLink = styled.a`
   width: 100%;
   padding: 10px;
   text-decoration: none;
-  color: #777;
   font-size: 1.2rem;
   font-weight: 500; // Add this line
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
+  color: #000;
 
   &:hover {
-    color: #000;
   }
 
   @media screen and (max-width: 768px) {
