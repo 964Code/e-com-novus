@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const ProductListContainer = styled.div`
+export const ProductListContainer = styled.section`
   width: 100%;
   height: 100%;
   margin: 30px auto 90px auto;
@@ -9,23 +9,6 @@ export const ProductListContainer = styled.div`
   flex-direction: column;
   max-width: 1200px;
 `;
-
-/* export const ProductList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  width: 100%;
-  height: 100%;
-
-  @media (max-width: 905px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
- */
 
 export const ProductList = styled.div`
   display: grid;
@@ -44,7 +27,7 @@ export const ProductList = styled.div`
   }
 `;
 
-export const Product = styled.div`
+export const Product = styled.figure`
   display: flex;
   flex-direction: column;
   height: 510px;
@@ -78,7 +61,7 @@ export const ProductImage = styled.img`
   object-position: top;
 `;
 
-export const TextWrapper = styled.div`
+export const TextWrapper = styled.figcaption`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -152,7 +135,7 @@ export const ProductLink = styled(Link)``;
 
 export const ProductButtonContainer = styled.div``;
 
-export const NoProductsMessage = styled.div`
+export const NoProductsMessage = styled.aside`
   text-align: center;
   font-size: 1.5rem;
   color: #ccc;
