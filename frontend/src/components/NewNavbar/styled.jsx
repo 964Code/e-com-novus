@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 import { FiX } from 'react-icons/fi';
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.header`
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   background-color: white;
@@ -29,7 +29,7 @@ export const Logo = styled.h1`
   cursor: pointer;
 `;
 
-export const NavItemList = styled.ol`
+export const NavItemList = styled.ul`
   display: flex;
   list-style: none;
   width: 100%;
@@ -59,7 +59,7 @@ export const NavItem = styled.li`
   font-variant: small-caps;
 
   &:not(:last-child) {
-    border-right: 2px solid #e5e5e5;
+    border-right: 3.5px solid #e5e5e5;
   }
   &:hover {
     background-color: #f7f7f7;
@@ -73,7 +73,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const DropdownMenu = styled.ol`
+export const DropdownMenu = styled.ul`
   position: absolute;
   top: 100%;
   left: 50%;
@@ -149,8 +149,8 @@ export const HamburgerIcon = styled(({ open, ...props }) =>
 export const StyledFlexWrapper = styled.div`
   display: none;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
+  padding: 0 10px;
   justify-content: flex-end;
 
   @media (max-width: 450px) {
