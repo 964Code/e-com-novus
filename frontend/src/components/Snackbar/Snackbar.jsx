@@ -28,11 +28,11 @@ export default function Snackbar(props) {
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
       <MuiSnackbar
-        key={message}
+        key={key}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >
         <Alert onClose={handleClose} severity={type} sx={{ width: '100%' }}>
           {message}

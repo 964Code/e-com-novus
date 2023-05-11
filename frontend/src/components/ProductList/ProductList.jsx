@@ -17,6 +17,7 @@ function ProductList({ products }) {
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
   const [visibleProducts, setVisibleProducts] = useState(9);
+  const [snackbarKey, setSnackbarKey] = useState(0);
   const currency = '$';
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function ProductList({ products }) {
     dispatch(addItem(product));
     setSnackbarMessage(`Product ${product.title} added to cart!`);
     setSnackbarType('success');
+    setSnackbarKey((prevKey) => prevKey + 1);
   };
 
   const handleProductEdit = (e, productId) => {
@@ -58,7 +60,11 @@ function ProductList({ products }) {
 
   return (
     <>
-      <Snackbar type={snackbarType} message={snackbarMessage} />
+      <Snackbar
+        key={snackbarKey}
+        type={snackbarType}
+        message={snackbarMessage}
+      />
       <S.ProductListContainer>
         {products.length === 0 ? (
           <S.NoProductsMessage>No products found</S.NoProductsMessage>

@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
 import * as S from './styled';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
@@ -23,14 +22,16 @@ function Product() {
   const admin = useSelector((state) => state.global.isToggleOn);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
+  const [snackbarKey, setSnackbarKey] = useState(0);
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
     dispatch(addItem(selectedProduct));
-    setSnackbarMessage('Product added to cart!');
+    setSnackbarMessage(`Product ${selectedProduct.title} added to cart!`);
     setSnackbarType('success');
+    setSnackbarKey((prevKey) => prevKey + 1);
   };
 
   const handleEditProduct = () => {
@@ -58,7 +59,11 @@ function Product() {
 
   return (
     <>
-      <Snackbar type={snackbarType} message={snackbarMessage} />
+      <Snackbar
+        key={snackbarKey}
+        type={snackbarType}
+        message={snackbarMessage}
+      />
 
       <S.ProductPageContainer>
         <S.ProductImage
