@@ -21,13 +21,14 @@ function SearchBar({ onSearch }) {
         placeholder='Search...'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        aria-label='Search'
       />
       {searchTerm && (
-        <S.SearchButton type='submit'>
+        <S.SearchButton type='submit' aria-label='Clear search'>
           <S.SearchIconClear onClick={handleClear} />
         </S.SearchButton>
       )}
-      <S.SearchButton type='submit'>
+      <S.SearchButton type='submit' aria-label='Submit search'>
         <S.SearchIcon />
       </S.SearchButton>
     </S.SearchBarForm>

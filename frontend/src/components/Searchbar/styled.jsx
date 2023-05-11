@@ -3,9 +3,10 @@ import { FaSearch } from 'react-icons/fa';
 import { RiDeleteBin7Line } from 'react-icons/ri';
 
 export const SearchBarForm = styled.form`
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
   border-radius: 5px;
   padding: 5px 10px;
   width: 100%;
@@ -14,17 +15,21 @@ export const SearchBarForm = styled.form`
   max-width: 400px;
   box-shadow: 0 0 5px #ccc;
   margin: 20px 0;
+  border: 2px solid #ccc;
+  :focus-within {
+    border: 3px solid #1ac1c6;
+  }
 `;
 
 export const SearchInput = styled.input`
   background-color: transparent;
   border: none;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   outline: none;
   width: 100%;
   &::placeholder {
-    color: #999;
+    color: #0a0a0a;
   }
 `;
 
