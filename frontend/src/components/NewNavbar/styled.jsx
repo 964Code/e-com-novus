@@ -105,17 +105,3 @@ export const CartCount = styled.span`
   padding: 3px 6px;
   border-radius: 50%;
 `;
-
-export const MobileMenuButton = styled.button`
-  display: none;
-
-  @media (max-width: 425px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-`;
