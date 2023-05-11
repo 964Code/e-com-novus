@@ -23,6 +23,7 @@ export const Logo = styled.h1`
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
+  padding: 15px;
   cursor: pointer;
 `;
 

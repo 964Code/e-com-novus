@@ -9,7 +9,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export default function Snackbar(props) {
-  const { message, type } = props;
+  const { message, type, key } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleClose = (event, reason) => {
@@ -27,7 +27,13 @@ export default function Snackbar(props) {
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
-      <MuiSnackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <MuiSnackbar
+        key={message}
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
         <Alert onClose={handleClose} severity={type} sx={{ width: '100%' }}>
           {message}
         </Alert>

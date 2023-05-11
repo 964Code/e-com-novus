@@ -59,6 +59,7 @@ function Product() {
   return (
     <>
       <Snackbar type={snackbarType} message={snackbarMessage} />
+
       <S.ProductPageContainer>
         <S.ProductImage
           src={

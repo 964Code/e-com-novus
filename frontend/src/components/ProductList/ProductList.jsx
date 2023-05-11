@@ -28,7 +28,7 @@ function ProductList({ products }) {
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
     dispatch(addItem(product));
-    setSnackbarMessage('Product added to cart!');
+    setSnackbarMessage(`Product ${product.title} added to cart!`);
     setSnackbarType('success');
   };
 
