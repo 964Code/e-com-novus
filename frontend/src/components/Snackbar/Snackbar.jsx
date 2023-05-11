@@ -30,7 +30,7 @@ export default function Snackbar(props) {
       <MuiSnackbar
         key={key}
         open={open}
-        autoHideDuration={6000}
+        autoHideDuration={3000}
         onClose={handleClose}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >

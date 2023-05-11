@@ -61,7 +61,7 @@ const NewNavbar = () => {
         </S.NavItemList>
         <S.CartContainer onClick={handleCartClick}>
           <S.CartIcon />
-          <S.CartCount>{amount}</S.CartCount>
+          {amount > 0 && <S.CartCount>{amount}</S.CartCount>}
         </S.CartContainer>
       </S.Navbar>
     </S.NavbarContainer>
