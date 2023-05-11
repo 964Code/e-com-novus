@@ -42,10 +42,12 @@ function SelectedCategory() {
         <CategoriesMenu />
         <SearchBar onSearch={setSearchTerm} />
         <S.SortContainer>
-          <S.SortLabel>Sort by price:</S.SortLabel>
+          <S.SortLabel htmlFor='sortSelect'>Sort by price:</S.SortLabel>
           <S.SortSelect
+            id='sortSelect'
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
+            aria-label='Sort by price'
           >
             <option value='lowToHigh'>Low to high</option>
             <option value='highToLow'>High to low</option>

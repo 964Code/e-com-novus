@@ -19,20 +19,22 @@ export const SortContainer = styled.div`
 export const SortLabel = styled.label`
   font-size: 1rem;
   margin-right: 10px;
+  font-weight: bold;
 `;
 
 export const SortSelect = styled.select`
   font-size: 1rem;
   padding: 5px;
-  border: none;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  background-color: #f7f7f7;
+  background-color: #fff;
   color: #333;
   cursor: pointer;
+  appearance: none;
 
   &:hover,
   &:focus {
-    background-color: #eee;
+    border-color: #1ac1c6;
     outline: none;
   }
 `;
