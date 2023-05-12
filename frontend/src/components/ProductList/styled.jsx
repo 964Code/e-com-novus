@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ProductListContainer = styled.section`
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   margin: 30px auto 90px auto;
   display: flex;
@@ -12,18 +12,18 @@ export const ProductListContainer = styled.section`
 
 export const ProductList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   width: 100%;
   height: 100%;
   justify-content: center;
 
   @media (max-width: 905px) {
-    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 640px) {
-    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    grid-template-columns: 1fr;
   }
 `;
 
