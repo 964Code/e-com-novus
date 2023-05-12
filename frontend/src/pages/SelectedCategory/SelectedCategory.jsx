@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './styled';
 import { useParams } from 'react-router-dom';
 import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
@@ -62,9 +62,7 @@ function SelectedCategory() {
           </S.SortSelectContainer>
         </S.SortContainer>
         <S.Container>
-          <S.Title>
-            {category} {/* {subcategory && `- ${subcategory}`} */}
-          </S.Title>
+          <S.Title>{category}</S.Title>
           {isAllCategory ? (
             <S.Message isAllCategory>All products for {category}</S.Message>
           ) : (
