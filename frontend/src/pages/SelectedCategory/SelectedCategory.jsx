@@ -10,6 +10,7 @@ import SearchBar from '../../components/Searchbar/Searchbar';
 function SelectedCategory() {
   const { category, subcategory } = useParams();
   const isAllCategory = subcategory && subcategory.includes('all');
+  const [sortOptionsVisible, setSortOptionsVisible] = React.useState(false);
 
   const products = useSelector((state) =>
     selectProductsByCategory(
@@ -40,22 +41,29 @@ function SelectedCategory() {
     <>
       <S.MainContainer>
         <CategoriesMenu />
-        <SearchBar onSearch={setSearchTerm} />
         <S.SortContainer>
-          <S.SortLabel htmlFor='sortSelect'>Sort by price:</S.SortLabel>
-          <S.SortSelect
-            id='sortSelect'
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-            aria-label='Sort by price'
-          >
-            <option value='lowToHigh'>Low to high</option>
-            <option value='highToLow'>High to low</option>
-          </S.SortSelect>
+          <SearchBar onSearch={setSearchTerm} />
+          <S.SortLabel htmlFor='sortSelect'></S.SortLabel>
+          <S.SortSelectContainer>
+            <S.SortIcon
+              onClick={() => setSortOptionsVisible(!sortOptionsVisible)}
+            />
+            {sortOptionsVisible && (
+              <S.SortSelect
+                id='sortSelect'
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                aria-label='Sort by price'
+              >
+                <option value='lowToHigh'>Low to high</option>
+                <option value='highToLow'>High to low</option>
+              </S.SortSelect>
+            )}
+          </S.SortSelectContainer>
         </S.SortContainer>
         <S.Container>
           <S.Title>
-            {category} {subcategory && `> ${subcategory}`}
+            {category} {/* {subcategory && `- ${subcategory}`} */}
           </S.Title>
           {isAllCategory ? (
             <S.Message isAllCategory>All products for {category}</S.Message>

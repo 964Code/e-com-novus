@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IoFilter } from 'react-icons/io5';
 
 export const Container = styled.div`
   display: flex;
@@ -8,18 +9,32 @@ export const Container = styled.div`
   padding: 0 20px;
   width: 100%;
   max-width: 1200px;
+  z-index: 1;
 `;
 
 export const SortContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  justify-content: space-between;
+  width: 80%;
+  height: 50px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const SortLabel = styled.label`
   font-size: 1rem;
   margin-right: 10px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+`;
+
+export const SortSelectContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const SortSelect = styled.select`
@@ -37,4 +52,10 @@ export const SortSelect = styled.select`
     border-color: #1ac1c6;
     outline: none;
   }
+`;
+
+export const SortIcon = styled(IoFilter)`
+  font-size: 2rem;
+  margin-right: 5px;
+  cursor: pointer;
 `;

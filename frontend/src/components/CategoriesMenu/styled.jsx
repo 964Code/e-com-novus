@@ -12,6 +12,7 @@ export const CategoriesMenuContainer = styled.div`
   border-radius: 5px;
   height: 60px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

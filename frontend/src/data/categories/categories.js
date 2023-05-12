@@ -49,7 +49,7 @@ export const categoryData = {
         name: 'Electronics',
         subcategories: {
             allElectronics: {
-                name: 'All - Electronics',
+                name: 'All',
             },
             phones: {
                 name: 'Phones',
@@ -66,7 +66,7 @@ export const categoryData = {
         name: 'Fashion',
         subcategories: {
             allFashion: {
-                name: 'All - Fashion',
+                name: 'All',
             },
             mens: {
                 name: 'Mens',
@@ -83,7 +83,7 @@ export const categoryData = {
         name: 'Home',
         subcategories: {
             allHome: {
-                name: 'All - Home',
+                name: 'All',
             },
             furniture: {
                 name: 'Furniture',

@@ -11,6 +11,7 @@ function Products() {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = React.useState('');
   const [sortOrder, setSortOrder] = React.useState('lowToHigh');
+  const [sortOptionsVisible, setSortOptionsVisible] = React.useState(false);
 
   // Return loading if products are not fetched
   if (products.length === 0) {
@@ -35,19 +36,28 @@ function Products() {
     <>
       <S.Container>
         <CategoriesMenu />
-        <SearchBar onSearch={setSearchTerm} />
+
         <S.SortContainer>
-          <S.SortLabel htmlFor='sortSelect'>Sort by price:</S.SortLabel>
-          <S.SortSelect
-            id='sortSelect'
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-            aria-label='Sort by price'
-          >
-            <option value='lowToHigh'>Low to high</option>
-            <option value='highToLow'>High to low</option>
-          </S.SortSelect>
+          <SearchBar onSearch={setSearchTerm} />
+          <S.SortLabel htmlFor='sortSelect'></S.SortLabel>
+          <S.SortSelectContainer>
+            <S.SortIcon
+              onClick={() => setSortOptionsVisible(!sortOptionsVisible)}
+            />
+            {sortOptionsVisible && (
+              <S.SortSelect
+                id='sortSelect'
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                aria-label='Sort by price'
+              >
+                <option value='lowToHigh'>Low to high</option>
+                <option value='highToLow'>High to low</option>
+              </S.SortSelect>
+            )}
+          </S.SortSelectContainer>
         </S.SortContainer>
+
         <ProductList products={filteredProducts} />
       </S.Container>
     </>

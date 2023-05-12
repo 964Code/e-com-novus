@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import { IoFilter } from 'react-icons/io5';
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 export const Container = styled.div`
@@ -12,7 +15,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 15px;
   padding: 20 20px;
 `;
 
@@ -26,7 +29,7 @@ export const Title = styled.h2`
 
 export const Message = styled.p`
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  display: flex;
   text-align: center;
   font-weight: 400;
   color: #777;
@@ -35,13 +38,26 @@ export const Message = styled.p`
 export const SortContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  justify-content: space-between;
+  width: 80%;
+  height: 50px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const SortLabel = styled.label`
   font-size: 1rem;
   margin-right: 10px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+`;
+
+export const SortSelectContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const SortSelect = styled.select`
@@ -59,4 +75,10 @@ export const SortSelect = styled.select`
     border-color: #1ac1c6;
     outline: none;
   }
+`;
+
+export const SortIcon = styled(IoFilter)`
+  font-size: 2rem;
+  margin-right: 5px;
+  cursor: pointer;
 `;
