@@ -1,4 +1,4 @@
-import * as styled from './styled';
+import * as S from './styled';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -145,110 +145,93 @@ function ProductForm() {
   return (
     <section>
       <Snackbar type={snackbarType} message={snackbarMessage} />
-      <form onSubmit={onSubmit}>
-        <div
-          className='form-group'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '50%',
-            margin: '0 auto',
-          }}
-        >
-          <label htmlFor='title'>Title</label>
-          <input
+      <S.FormContainer onSubmit={onSubmit}>
+        <S.FormGroup>
+          <S.FormLabel htmlFor='title'>Title</S.FormLabel>
+          <S.FormInput
             type='text'
             name='title'
             id='title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+        </S.FormGroup>
 
-          <label htmlFor='description'>Description</label>
-          <input
+        <S.FormGroup>
+          <S.FormLabel htmlFor='description'>Description</S.FormLabel>
+          <S.FormInputDescription
             type='text'
             name='description'
             id='description'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
+        </S.FormGroup>
 
-          <label htmlFor='price'>Price</label>
-          <input
+        <S.FormGroup>
+          <S.FormLabel htmlFor='price'>Price</S.FormLabel>
+          <S.FormInput
             type='text'
             name='price'
             id='price'
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
+        </S.FormGroup>
 
-          {/*      <label htmlFor='category'>Category</label>
-          <input
-            type='text'
+        <S.FormGroup>
+          <S.FormLabel htmlFor='category'>Category</S.FormLabel>
+          <S.FormSelect
             name='category'
             id='category'
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          />
- */}
-
-          <label htmlFor='category'>Category</label>
-          <select name='category' id='category' onChange={handleCategoryChange}>
+            onChange={handleCategoryChange}
+          >
             <option value=''>Select a category</option>
             {mainCategories.map((mainCategory) => (
               <option key={mainCategory} value={mainCategory}>
                 {categories[mainCategory].name}
               </option>
             ))}
-          </select>
+          </S.FormSelect>
+        </S.FormGroup>
 
-          {subCategories && (
-            <div>
-              <label htmlFor='subcategory'>Subcategory</label>
-              <select
-                name='subcategory'
-                id='subcategory'
-                value={subcategory}
-                onChange={handleSubcategoryChange}
-              >
-                <option value=''>Select a subcategory</option>
-                {Object.keys(subCategories).map((subCategoryKey) => (
-                  <option key={subCategoryKey} value={subCategoryKey}>
-                    {subCategories[subCategoryKey].name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
+        {subCategories && (
+          <S.FormGroup>
+            <S.FormLabel htmlFor='subcategory'>Subcategory</S.FormLabel>
+            <S.FormSelect
+              name='subcategory'
+              id='subcategory'
+              value={subcategory}
+              onChange={handleSubcategoryChange}
+            >
+              <option value=''>Select a subcategory</option>
+              {Object.keys(subCategories).map((subCategoryKey) => (
+                <option key={subCategoryKey} value={subCategoryKey}>
+                  {subCategories[subCategoryKey].name}
+                </option>
+              ))}
+            </S.FormSelect>
+          </S.FormGroup>
+        )}
 
-          <label htmlFor='image'>Image</label>
-          <input
+        <S.FormGroup>
+          <S.FormLabel htmlFor='image'>Image URL</S.FormLabel>
+          <S.FormInput
             type='text'
             name='image'
             id='image'
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
-        </div>
-        <div
-          className='form-group'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '50%',
-            margin: '0 auto',
-          }}
-        >
-          <button
-            type='submit'
-            onClick={() => {
-              onSubmit;
-            }}
-          >
+        </S.FormGroup>
+
+        <S.FormGroup>
+          <S.SubmitButton type='submit'>
             {id ? 'Update' : 'Create'}
-          </button>
-        </div>
-      </form>
+          </S.SubmitButton>
+        </S.FormGroup>
+      </S.FormContainer>
     </section>
   );
 }

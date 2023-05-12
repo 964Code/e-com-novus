@@ -89,8 +89,8 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   height: 30px;
   width: 100%;
-  padding: 0 10px;
-  margin: 0 0 10px 0;
+  /* padding: 0 10px; */
+  /* margin: 0 0 10px 0; */
 `;
 
 export const ProductButton = styled.button.attrs((props) => ({
@@ -103,24 +103,24 @@ export const ProductButton = styled.button.attrs((props) => ({
   height: 100%;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &.addToCart {
-    background-color: #42bb00;
+    background-color: #77f875;
   }
 
   &.edit {
-    background-color: #ff9100;
+    background-color: #ffbf6c;
   }
 
   &.delete {
-    background-color: #ff0000;
+    background-color: #ff5e5e;
   }
 
   &:not(:last-child) {
-    margin-right: 10px;
+    /*  margin-right: 10px; */
   }
 `;
 
