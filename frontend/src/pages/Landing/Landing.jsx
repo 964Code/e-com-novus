@@ -14,7 +14,7 @@ function Landing() {
           Products are temporary and limited in quantity, so don't miss out!
         </S.LandingSubHeader>
         <S.LandingButton to='/products' aria-label='navigate to products'>
-          Explore Products
+          EXPLORE PRODUCTS
         </S.LandingButton>
       </S.ContentContainer>
     </S.LandingContainer>

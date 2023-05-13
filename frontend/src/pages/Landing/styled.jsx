@@ -48,14 +48,12 @@ export const LandingButton = styled(Link)`
   padding: 12px 24px;
   background-color: #f0f0f0;
   color: #333;
-  font-variant: all-small-caps;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   letter-spacing: 1px;
-  line-height: 1.2;
 
   &:hover {
     background-color: #dca537;
