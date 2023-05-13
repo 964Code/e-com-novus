@@ -34,7 +34,7 @@ export const Product = styled.figure`
   width: 285px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   border-radius: 5px;
   border: 2.5px solid #e5e5e5;
   overflow: hidden;
@@ -103,19 +103,18 @@ export const ProductButton = styled.button.attrs((props) => ({
   height: 100%;
   color: #fff;
   border: none;
-  /* border-radius: 5px; */
   cursor: pointer;
   transition: background-color 0.3s ease;
 
-  &.addToCart {
+  &.addToCart:hover {
     background-color: #77f875;
   }
 
-  &.edit {
+  &.edit:hover {
     background-color: #ffbf6c;
   }
 
-  &.delete {
+  &.delete:hover {
     background-color: #ff5e5e;
   }
 

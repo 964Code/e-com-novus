@@ -21,6 +21,8 @@ function App() {
     dispatch(fetchProducts());
   }, [dispatch]);
 
+  const isLandingPage = location.pathname === '/';
+
   return (
     <>
       <Router>
@@ -42,7 +44,7 @@ function App() {
           <Route path='/cart' element={<CartPage />} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
         </Routes>
-        <Footer />
+        {!isLandingPage && <Footer />}
       </Router>
     </>
   );
