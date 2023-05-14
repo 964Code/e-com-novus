@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const CartSection = styled.section`
-  min-height: calc(100vh - 120px);
-  width: 90vw;
   margin: 0 auto;
   margin-top: 40px;
   padding: 2.5rem 0;
