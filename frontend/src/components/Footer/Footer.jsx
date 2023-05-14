@@ -1,8 +1,18 @@
 import React from 'react';
 import * as S from './styled';
+import { useLocation } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
+
+  console.log(location.pathname);
+
+  if (isLandingPage) {
+    return null;
+  }
+
   return (
     <S.FooterContainer>
       <S.ContentWrapper>

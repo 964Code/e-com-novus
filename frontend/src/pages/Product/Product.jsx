@@ -93,6 +93,7 @@ function Product() {
               className='addToCart'
               aria-label='Add to cart'
             >
+              ADD TO CART
               <S.ButtonIcon
                 as={AiOutlineShoppingCart}
                 aria-label='Add to cart'

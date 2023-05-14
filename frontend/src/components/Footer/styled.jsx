@@ -5,19 +5,17 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border-top: 2.5px solid rgb(229, 229, 229);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
 
   @media (max-width: 768px) and (max-height: 1000px) {
     flex-direction: column;
-    height: auto;
     position: relative;
     padding: 0;
   }
@@ -36,7 +34,6 @@ export const ContentWrapper = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
     padding: 10px;
   }
 `;

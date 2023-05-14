@@ -1,5 +1,10 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import Landing from './pages/Landing/Landing';
 import About from './pages/About/About';
 import Products from './pages/Products/Products';
@@ -21,86 +26,30 @@ function App() {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  const isLandingPage = location.pathname === '/';
-
   return (
     <>
       <Router>
         <NewNavbar />
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <>
-                <Landing />
-              </>
-            }
-          />
-          <Route
-            path='/addproducts'
-            element={
-              <>
-                <AddProducts />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/about'
-            element={
-              <>
-                <About />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/products'
-            element={
-              <>
-                <Products />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/products/update_product/:id'
-            element={
-              <>
-                <UpdateProduct />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/products/:category/:subcategory'
-            element={
-              <>
-                <SelectedCategory />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/products/show_more/:id'
-            element={
-              <>
-                <Product />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path='/cart'
-            element={
-              <>
-                <CartPage />
-                <Footer />
-              </>
-            }
-          />
-          <Route path='*' element={<h1>404 Not Found</h1>} />
-        </Routes>
+        <div className='app-wrapper'>
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/addproducts' element={<AddProducts />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/products' element={<Products />} />
+            <Route
+              path='/products/update_product/:id'
+              element={<UpdateProduct />}
+            />
+            <Route
+              path='/products/:category/:subcategory'
+              element={<SelectedCategory />}
+            />
+            <Route path='/products/show_more/:id' element={<Product />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='*' element={<h1>404 Not Found</h1>} />
+          </Routes>
+        </div>
+        <Footer />
       </Router>
     </>
   );

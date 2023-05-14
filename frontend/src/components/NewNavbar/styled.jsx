@@ -7,7 +7,7 @@ export const NavbarContainer = styled.header`
   font-family: 'Poppins', sans-serif;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.305);
   border-bottom: 2.5px solid #e5e5e5;
 `;
 

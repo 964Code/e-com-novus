@@ -26,7 +26,7 @@ export const ProductList = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 650px) {
     grid-template-columns: 1fr;
   }
 `;
