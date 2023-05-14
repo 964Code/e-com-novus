@@ -8,13 +8,15 @@ function Landing() {
         <source src={LandingVideo} type='video/mp4' />
       </S.BackgroundVideo>
       <S.ContentContainer>
-        <S.LandingHeader>Welcome to UniqMarket</S.LandingHeader>
+        <S.LandingHeader>
+          Welcome to <span className='cursive'>UniqMarket</span>
+        </S.LandingHeader>
         <S.LandingSubHeader>
           Discover a curated selection of unique and interesting products.
           Products are temporary and limited in quantity, so don't miss out!
         </S.LandingSubHeader>
         <S.LandingButton to='/products' aria-label='navigate to products'>
-          EXPLORE PRODUCTS
+          EXPLORE
         </S.LandingButton>
       </S.ContentContainer>
     </S.LandingContainer>

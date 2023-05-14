@@ -28,23 +28,79 @@ function App() {
       <Router>
         <NewNavbar />
         <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/addproducts' element={<AddProducts />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/products' element={<Products />} />
+          <Route
+            path='/'
+            element={
+              <>
+                <Landing />
+              </>
+            }
+          />
+          <Route
+            path='/addproducts'
+            element={
+              <>
+                <AddProducts />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path='/about'
+            element={
+              <>
+                <About />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path='/products'
+            element={
+              <>
+                <Products />
+                <Footer />
+              </>
+            }
+          />
           <Route
             path='/products/update_product/:id'
-            element={<UpdateProduct />}
+            element={
+              <>
+                <UpdateProduct />
+                <Footer />
+              </>
+            }
           />
           <Route
             path='/products/:category/:subcategory'
-            element={<SelectedCategory />}
+            element={
+              <>
+                <SelectedCategory />
+                <Footer />
+              </>
+            }
           />
-          <Route path='/products/show_more/:id' element={<Product />} />
-          <Route path='/cart' element={<CartPage />} />
+          <Route
+            path='/products/show_more/:id'
+            element={
+              <>
+                <Product />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path='/cart'
+            element={
+              <>
+                <CartPage />
+                <Footer />
+              </>
+            }
+          />
           <Route path='*' element={<h1>404 Not Found</h1>} />
         </Routes>
-        {!isLandingPage && <Footer />}
       </Router>
     </>
   );

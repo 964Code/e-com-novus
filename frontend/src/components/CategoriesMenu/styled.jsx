@@ -13,6 +13,7 @@ export const CategoriesMenuContainer = styled.div`
   height: 60px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 10;
+  font-family: 'Poppins', sans-serif;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

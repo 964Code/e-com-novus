@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
   padding: 20px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  /*  font-family: 'Poppins', sans-serif; */
 `;
 
 export const Container = styled.div`

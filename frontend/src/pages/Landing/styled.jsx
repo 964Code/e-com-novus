@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const LandingContainer = styled.div`
   position: relative;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const BackgroundVideo = styled.video`
@@ -20,7 +21,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 62px);
   padding: 1rem;
 `;
 
@@ -30,10 +31,17 @@ export const LandingHeader = styled.h1`
   margin-bottom: 1rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  span.cursive {
+    font-family: 'caveat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
 `;
 
 export const LandingSubHeader = styled.h2`
   font-size: 1.5rem;
+  font-style: italic;
   color: #fff;
   margin-bottom: 3rem;
   text-align: center;
@@ -48,7 +56,7 @@ export const LandingButton = styled(Link)`
   padding: 12px 24px;
   background-color: #f0f0f0;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 5px;
@@ -56,10 +64,10 @@ export const LandingButton = styled(Link)`
   letter-spacing: 1px;
 
   &:hover {
-    background-color: #dca537;
+    background-color: #f98a22;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;

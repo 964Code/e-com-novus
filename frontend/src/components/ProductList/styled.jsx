@@ -2,12 +2,17 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ProductListContainer = styled.section`
-  /* width: 100%; */
+  /*   width: 100%;
+ */
   height: 100%;
   margin: 30px auto 90px auto;
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `;
 
 export const ProductList = styled.div`
@@ -62,6 +67,7 @@ export const ProductImage = styled.img`
 `;
 
 export const TextWrapper = styled.figcaption`
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -75,12 +81,17 @@ export const TextWrapper = styled.figcaption`
 export const ProductTitle = styled.h2`
   line-height: 1.3;
   text-align: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 `;
 
 export const ProductDescription = styled.p``;
 
 export const ProductPrice = styled.p`
   font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #6d6d6d;
 `;
 
 export const ButtonWrapper = styled.div`

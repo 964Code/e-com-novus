@@ -51,7 +51,7 @@ const NewNavbar = () => {
       <S.Navbar>
         <S.Logo
           onClick={() => {
-            toggleMobileDropdown();
+            if (isMobileDropdownOpen) toggleMobileDropdown();
             navigate('/');
           }}
         >
