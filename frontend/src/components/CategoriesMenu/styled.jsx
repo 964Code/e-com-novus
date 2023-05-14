@@ -48,15 +48,13 @@ export const CategoriesMenuItem = styled.li`
   cursor: pointer;
 
   &:hover {
-    background-color: #f7f7f7;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f4c9a1;
   }
 
   @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 10px;
     border-top: none;
     border-bottom: none;
     border-bottom: 1px solid #c3c3c3;
@@ -67,6 +65,10 @@ export const CategoriesMenuItem = styled.li`
 
     &:last-child {
       border-bottom: none;
+    }
+
+    &:hover {
+      background-color: transparent;
     }
   }
 `;
@@ -95,6 +97,11 @@ export const CategoriesMenuLink = styled.a`
     padding: 10px 0;
     text-align: center;
     transition: none;
+    /*  border: 1px solid red; */
+
+    &:hover {
+      background-color: #f4c9a1;
+    }
 
     ${(props) =>
       props.active &&
@@ -102,6 +109,7 @@ export const CategoriesMenuLink = styled.a`
       `
       color: #000;
       border-bottom: 2px solid #000;
+      background-color: #f4c9a1;
       `}
   }
 `;
@@ -117,7 +125,7 @@ export const CategoriesSubMenuList = styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 
@@ -137,16 +145,19 @@ export const CategoriesSubMenuLink = styled.a`
   padding: 10px;
   text-decoration: none;
   font-size: 1.2rem;
-  font-weight: 500; // Add this line
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
   color: #000;
 
   &:hover {
+    background-color: #f4c9a1;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 10px 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
   }
 `;

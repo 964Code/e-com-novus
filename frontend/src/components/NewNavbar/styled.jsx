@@ -6,7 +6,7 @@ import { FiX } from 'react-icons/fi';
 export const NavbarContainer = styled.header`
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-bottom: 2.5px solid #e5e5e5;
 `;
@@ -33,9 +33,7 @@ export const Logo = styled.h1`
 export const NavItemList = styled.ul`
   display: flex;
   list-style: none;
-  /*   width: 100%; */
   height: 100%;
-  /*  border: 1px solid red; */
   justify-content: space-evenly;
   align-items: center;
 
@@ -58,19 +56,20 @@ export const NavItem = styled.li`
   padding: 10px;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   width: 90%;
   text-align: center;
   text-transform: uppercase;
+  /* border: 1px solid red; */
 
   &:not(:last-child) {
-    border-right: 3.5px solid #e5e5e5;
+    /* border-right: 3.5px solid #e5e5e5; */
   }
   &:hover {
-    background-color: #f98a22;
+    background-color: #f4c9a1;
   }
 
   @media (max-width: 450px) {
@@ -78,6 +77,9 @@ export const NavItem = styled.li`
       border-right: none;
     }
     margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    height: 60px;
   }
 `;
 
@@ -122,6 +124,8 @@ export const CartContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-self: flex-end;
+  margin-left: auto;
 `;
 
 export const CartIcon = styled(AiOutlineShoppingCart)`

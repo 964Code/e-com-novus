@@ -5,6 +5,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
 import SearchBar from '../../components/Searchbar/Searchbar';
 import * as S from './styled';
+import Footer from '../../components/Footer/Footer';
 
 function Products() {
   const products = useSelector(selectProducts);

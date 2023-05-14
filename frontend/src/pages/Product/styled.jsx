@@ -18,6 +18,7 @@ export const ProductPageContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   border-radius: 5px;
   border: 2.5px solid #e5e5e5;
+  background-color: #fff;
 `;
 
 export const ProductImage = styled.img`
@@ -82,7 +83,7 @@ export const ActionButton = styled.button`
   display: flex;
   flex: 1;
   justify-content: center;
-  background-color: #e5e5e5;
+  background-color: #fff;
   border: none;
   color: #070707;
   padding: 10px 15px;
@@ -90,7 +91,7 @@ export const ActionButton = styled.button`
   cursor: pointer;
   transition: background-color 0.2s;
 
-  &.addToCart:hover {
+  &.addToCart {
     background-color: #97e696;
   }
 

@@ -7,6 +7,7 @@ export const ProductListContainer = styled.section`
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  background-color: transparent;
 
   @media (max-width: 640px) {
     width: 100%;
@@ -99,8 +100,7 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   height: 30px;
   width: 100%;
-  /* padding: 0 10px; */
-  /* margin: 0 0 10px 0; */
+  border-top: 2.5px solid #e6e4e4;
 `;
 
 export const ProductButton = styled.button.attrs((props) => ({
@@ -109,6 +109,7 @@ export const ProductButton = styled.button.attrs((props) => ({
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
   flex: 1;
   height: 100%;
   color: #fff;
@@ -116,6 +117,9 @@ export const ProductButton = styled.button.attrs((props) => ({
   cursor: pointer;
   transition: background-color 0.3s ease;
 
+  &.addToCart {
+    background-color: #ffffff;
+  }
   &.addToCart:hover {
     background-color: #97e696;
   }
