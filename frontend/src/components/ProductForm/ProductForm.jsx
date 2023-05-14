@@ -8,6 +8,7 @@ import {
 import { useParams } from 'react-router-dom';
 import { selectProductById } from '../../features/products/productSlice';
 import Snackbar from '../Snackbar/Snackbar';
+import { categoryData } from '../../data/categories/categories';
 
 function ProductForm() {
   const dispatch = useDispatch();
@@ -31,51 +32,7 @@ function ProductForm() {
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('');
 
-  const categories = {
-    electronics: {
-      name: 'Electronics',
-      subcategories: {
-        phones: {
-          name: 'Phones',
-        },
-        laptops: {
-          name: 'Laptops',
-        },
-        tv: {
-          name: 'TV',
-        },
-      },
-    },
-    fashion: {
-      name: 'Fashion',
-      subcategories: {
-        mens: {
-          name: 'Mens',
-        },
-        womens: {
-          name: 'Womens',
-        },
-        kids: {
-          name: 'Kids',
-        },
-      },
-    },
-    home: {
-      name: 'Home',
-      subcategories: {
-        furniture: {
-          name: 'Furniture',
-        },
-        appliances: {
-          name: 'Appliances',
-        },
-        decor: {
-          name: 'Decor',
-        },
-      },
-    },
-  };
-
+  const categories = categoryData;
   const mainCategories = Object.keys(categories);
 
   const handleCategoryChange = (e) => {

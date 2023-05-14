@@ -31,6 +31,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
