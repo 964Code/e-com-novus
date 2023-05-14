@@ -130,11 +130,13 @@ function ProductList({ products }) {
                 </S.Product>
               ))}
             </S.ProductList>
-            {visibleProducts < products.length && (
-              <S.LoadMoreButton onClick={handleLoadMore}>
-                Load more
-              </S.LoadMoreButton>
-            )}
+            <S.LoadMoreContainer>
+              {visibleProducts < products.length && (
+                <S.LoadMoreButton onClick={handleLoadMore}>
+                  Load more
+                </S.LoadMoreButton>
+              )}
+            </S.LoadMoreContainer>
           </>
         )}
       </S.ProductListContainer>

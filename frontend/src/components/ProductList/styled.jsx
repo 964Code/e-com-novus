@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const ProductListContainer = styled.section`
   height: 100%;
-  margin: 30px auto 90px auto;
+  margin: 30px auto 0 auto;
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -53,17 +53,16 @@ export const ProductImageContainer = styled.div`
   height: 70%;
   position: relative;
   background-color: #fff;
-  margin: 7px 5px;
 `;
 
 export const ProductImage = styled.img`
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 0 0 15px 0;
+  object-fit: contain;
+  padding: 0 0 30px 0;
   max-height: 100%;
-  object-position: top;
+  object-position: center;
 `;
 
 export const TextWrapper = styled.figcaption`
@@ -160,17 +159,16 @@ export const LoadMoreContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 20px;
-  flex-grow: 1;
+  margin: 50px auto;
 `;
+
 export const LoadMoreButton = styled.button`
   display: block;
   width: 200px;
-  height: 40px;
   margin: 20px auto;
-  padding: 0;
+  padding: 5px;
   border: 2px solid #333;
-  background-color: transparent;
+  background-color: white;
   color: #333;
   font-size: 1rem;
   font-weight: 600;
