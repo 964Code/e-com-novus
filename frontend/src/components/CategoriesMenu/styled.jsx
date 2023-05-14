@@ -8,10 +8,10 @@ export const CategoriesMenuContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   background-color: #fff;
-  border: 2.5px solid #e5e5e5;
-  border-radius: 5px;
+  border: 2.5px solid #cdcbcbc5;
+  /*  border-radius: 5px; */
   height: 60px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
   z-index: 10;
   font-family: 'Poppins', sans-serif;
 
@@ -128,7 +128,13 @@ export const CategoriesSubMenuList = styled.ul`
   background-color: #ffffff;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  /*   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px 3px; */
+  border-bottom: 2px solid #cdcbcbc5;
+  border-left: 2px solid #cdcbcbc5;
+  border-right: 2px solid #cdcbcbc5;
+  border-radius: 0 0 5px 5px;
 
+  /*  border: 2.5px solid #cdcbcbc5; */
   @media screen and (max-width: 768px) {
     position: relative;
     top: auto;

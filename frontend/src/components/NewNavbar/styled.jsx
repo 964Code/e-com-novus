@@ -27,6 +27,7 @@ export const Logo = styled.h1`
   font-weight: 700;
   color: #000;
   padding: 15px;
+  margin-right: 20px;
   cursor: pointer;
 `;
 
@@ -110,7 +111,7 @@ export const DropdownItem = styled.li`
 
   width: 100%;
   &:hover {
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
   }
 
   @media (max-width: 450px) {

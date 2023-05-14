@@ -150,8 +150,8 @@ export const ProductButtonContainer = styled.div``;
 
 export const NoProductsMessage = styled.aside`
   text-align: center;
-  font-size: 1.5rem;
-  color: #ccc;
+  font-size: 1.2rem;
+  color: #555555;
   margin: 2rem auto;
   text-transform: uppercase;
 `;
