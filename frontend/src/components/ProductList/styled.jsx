@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ProductListContainer = styled.section`
-  /*   width: 100%;
- */
   height: 100%;
   margin: 30px auto 90px auto;
   display: flex;
@@ -54,6 +52,7 @@ export const ProductImageContainer = styled.div`
   height: 70%;
   position: relative;
   background-color: #fff;
+  margin: 7px 5px;
 `;
 
 export const ProductImage = styled.img`
@@ -118,15 +117,15 @@ export const ProductButton = styled.button.attrs((props) => ({
   transition: background-color 0.3s ease;
 
   &.addToCart:hover {
-    background-color: #77f875;
+    background-color: #97e696;
   }
 
   &.edit:hover {
-    background-color: #ffbf6c;
+    background-color: #ffcc88;
   }
 
   &.delete:hover {
-    background-color: #ff5e5e;
+    background-color: #f37171;
   }
 
   &:not(:last-child) {
@@ -150,6 +149,7 @@ export const NoProductsMessage = styled.aside`
   font-size: 1.5rem;
   color: #ccc;
   margin: 2rem auto;
+  text-transform: uppercase;
 `;
 
 export const LoadMoreContainer = styled.div`

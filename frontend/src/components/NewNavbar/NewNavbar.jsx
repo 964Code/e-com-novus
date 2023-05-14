@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { selectCartAmount } from '../../features/cart/cartSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleAdmin } from '../../features/global/globalSlice';
-import { FiMenu } from 'react-icons/fi';
 
 const NewNavbar = () => {
   const dispatch = useDispatch();

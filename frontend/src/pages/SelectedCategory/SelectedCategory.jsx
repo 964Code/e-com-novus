@@ -66,7 +66,7 @@ function SelectedCategory() {
           {isAllCategory ? (
             <S.Message isAllCategory>All products for {category}</S.Message>
           ) : (
-            <S.Message>Selected subcategory: {subcategory}</S.Message>
+            <S.Message>{subcategory}</S.Message>
           )}
         </S.Container>
         <ProductList products={filteredProducts} />

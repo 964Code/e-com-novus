@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import { Snackbar as MuiSnackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 
@@ -27,17 +26,29 @@ export default function Snackbar(props) {
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
-      <MuiSnackbar
-        key={key}
-        open={open}
-        autoHideDuration={3000}
-        onClose={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          position: 'fixed',
+          bottom: '250px',
+          left: '0',
+          right: '0',
+          zIndex: '6969',
+        }}
       >
-        <Alert onClose={handleClose} severity={type} sx={{ width: '100%' }}>
-          {message}
-        </Alert>
-      </MuiSnackbar>
+        <MuiSnackbar
+          key={key}
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert onClose={handleClose} severity={type} sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </MuiSnackbar>
+      </div>
     </Stack>
   );
 }

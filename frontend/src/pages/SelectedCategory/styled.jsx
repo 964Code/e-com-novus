@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
   padding: 20px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  /*  font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const Container = styled.div`
@@ -21,19 +21,21 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 `;
 
 export const Message = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   text-align: center;
   font-weight: 400;
   color: #777;
+  font-weight: bold;
+  text-transform: uppercase;
 `;
 
 export const SortContainer = styled.div`
@@ -70,7 +72,6 @@ export const SortSelect = styled.select`
   color: #333;
   cursor: pointer;
   appearance: none;
-
   &:hover,
   &:focus {
     border-color: #1ac1c6;

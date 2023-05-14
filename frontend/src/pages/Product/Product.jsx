@@ -5,18 +5,18 @@ import { useSelector } from 'react-redux';
 import * as S from './styled';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
-
 import {
   deleteProduct,
   selectProductById,
 } from '../../features/products/productSlice';
+import { useNavigate } from 'react-router-dom';
+import Snackbar from '../../components/Snackbar/Snackbar';
 import {
   AiOutlineShoppingCart,
   AiOutlineEdit,
   AiOutlineDelete,
 } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
-import Snackbar from '../../components/Snackbar/Snackbar';
+import { IoIosArrowBack } from 'react-icons/io';
 
 function Product() {
   const admin = useSelector((state) => state.global.isToggleOn);
@@ -58,13 +58,17 @@ function Product() {
   if (!selectedProduct) return <h1>Product not found</h1>;
 
   return (
-    <>
+    <S.ProductContainerWrapper>
       <Snackbar
         key={snackbarKey}
         type={snackbarType}
         message={snackbarMessage}
       />
-
+      <S.ButtonWrapper>
+        <S.BackButton onClick={() => navigate(-1)}>
+          <S.ButtonIcon as={IoIosArrowBack} />
+        </S.BackButton>
+      </S.ButtonWrapper>
       <S.ProductPageContainer>
         <S.ProductImage
           src={
@@ -84,23 +88,38 @@ function Product() {
           </S.ProductDescription>
           <S.ProductPrice>${selectedProduct.price}</S.ProductPrice>
           <S.ProductButtons>
-            <S.ActionButton onClick={handleAddToCart}>
-              Add to Cart
+            <S.ActionButton
+              onClick={handleAddToCart}
+              className='addToCart'
+              aria-label='Add to cart'
+            >
+              <S.ButtonIcon
+                as={AiOutlineShoppingCart}
+                aria-label='Add to cart'
+              />
             </S.ActionButton>
             {admin && (
               <>
-                <S.ActionButton onClick={handleEditProduct}>
-                  Edit
+                <S.ActionButton
+                  onClick={handleEditProduct}
+                  className='edit'
+                  aria-label='Edit product'
+                >
+                  <S.ButtonIcon as={AiOutlineEdit} />
                 </S.ActionButton>
-                <S.ActionButton onClick={handleDeleteProduct}>
-                  Delete
+                <S.ActionButton
+                  onClick={handleDeleteProduct}
+                  className='delete'
+                  aria-label='Delete product'
+                >
+                  <S.ButtonIcon as={AiOutlineDelete} />
                 </S.ActionButton>
               </>
             )}
           </S.ProductButtons>
         </S.ProductDetails>
       </S.ProductPageContainer>
-    </>
+    </S.ProductContainerWrapper>
   );
 }
 
