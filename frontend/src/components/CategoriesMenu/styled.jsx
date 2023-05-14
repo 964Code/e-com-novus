@@ -9,7 +9,6 @@ export const CategoriesMenuContainer = styled.div`
   max-width: 1200px;
   background-color: #fff;
   border: 2.5px solid #cdcbcbc5;
-  /*  border-radius: 5px; */
   height: 60px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
   z-index: 10;
@@ -97,7 +96,6 @@ export const CategoriesMenuLink = styled.a`
     padding: 10px 0;
     text-align: center;
     transition: none;
-    /*  border: 1px solid red; */
 
     &:hover {
       background-color: #f4c9a1;
@@ -128,13 +126,11 @@ export const CategoriesSubMenuList = styled.ul`
   background-color: #ffffff;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  /*   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px 3px; */
   border-bottom: 2px solid #cdcbcbc5;
   border-left: 2px solid #cdcbcbc5;
   border-right: 2px solid #cdcbcbc5;
   border-radius: 0 0 5px 5px;
 
-  /*  border: 2.5px solid #cdcbcbc5; */
   @media screen and (max-width: 768px) {
     position: relative;
     top: auto;

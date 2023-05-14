@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -9,7 +8,6 @@ export const AboutContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  /* min-height: 100vh; */
 `;
 
 export const AboutHeader = styled.h1`

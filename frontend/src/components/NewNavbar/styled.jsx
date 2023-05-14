@@ -64,11 +64,7 @@ export const NavItem = styled.li`
   width: 90%;
   text-align: center;
   text-transform: uppercase;
-  /* border: 1px solid red; */
 
-  &:not(:last-child) {
-    /* border-right: 3.5px solid #e5e5e5; */
-  }
   &:hover {
     background-color: #f4c9a1;
   }
@@ -111,7 +107,7 @@ export const DropdownItem = styled.li`
 
   width: 100%;
   &:hover {
-    /* background-color: #f7f7f7; */
+    background-color: #f4c9a1;
   }
 
   @media (max-width: 450px) {
