@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-/* import { ChevronDown, ChevronUp } from 'react-icons/ai'; */
 
 export const CartItemWrapper = styled.article`
   display: grid;
