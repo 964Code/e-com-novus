@@ -10,7 +10,7 @@ export const CartItemWrapper = styled.article`
   margin: 1.5rem 0;
 `;
 
-export const CartItemImage = styled.img`
+export const CartItemImage = styled.img.attrs({ loading: 'lazy' })`
   width: 5rem;
   height: 5rem;
   object-fit: cover;

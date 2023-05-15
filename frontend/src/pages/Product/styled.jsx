@@ -21,7 +21,7 @@ export const ProductPageContainer = styled.div`
   background-color: #fff;
 `;
 
-export const ProductImage = styled.img`
+export const ProductImage = styled.img.attrs({ loading: 'lazy' })`
   width: 100%;
   height: 400px;
   object-fit: contain;

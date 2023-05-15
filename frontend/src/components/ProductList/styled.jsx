@@ -55,7 +55,7 @@ export const ProductImageContainer = styled.div`
   background-color: #fff;
 `;
 
-export const ProductImage = styled.img`
+export const ProductImage = styled.img.attrs({ loading: 'lazy' })`
   position: absolute;
   width: 100%;
   height: 100%;
