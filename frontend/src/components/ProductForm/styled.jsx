@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.form`
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
 `;
 
 export const FormGroup = styled.div`
