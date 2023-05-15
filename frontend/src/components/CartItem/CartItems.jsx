@@ -35,11 +35,17 @@ const CartItem = ({ _id, image, title, price, amount }) => {
         <S.RemoveButton onClick={handleRemoveItem}>remove</S.RemoveButton>
       </S.CartItemInfo>
       <S.AmountButtons>
-        <S.AmountButton onClick={handleIncreaseAmount}>
+        <S.AmountButton
+          onClick={handleIncreaseAmount}
+          aria-label='increase product amount'
+        >
           <ChevronUp />
         </S.AmountButton>
         <S.Amount>{amount}</S.Amount>
-        <S.AmountButton onClick={handleDecreaseAmount}>
+        <S.AmountButton
+          onClick={handleDecreaseAmount}
+          aria-label='decrease product amount'
+        >
           <ChevronDown />
         </S.AmountButton>
       </S.AmountButtons>

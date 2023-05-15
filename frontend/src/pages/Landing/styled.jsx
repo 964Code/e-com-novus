@@ -16,7 +16,7 @@ export const BackgroundVideo = styled.video`
   z-index: -1;
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;

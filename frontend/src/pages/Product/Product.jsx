@@ -65,7 +65,7 @@ function Product() {
         message={snackbarMessage}
       />
       <S.ButtonWrapper>
-        <S.BackButton onClick={() => navigate(-1)}>
+        <S.BackButton onClick={() => navigate(-1)} aria-label='Go back'>
           <S.ButtonIcon as={IoIosArrowBack} />
         </S.BackButton>
       </S.ButtonWrapper>
@@ -77,6 +77,7 @@ function Product() {
               : 'https://img.freepik.com/premium-psd/bottle-product-mockup-psd-beauty-packaging_53876-130082.jpg'
           }
           alt={selectedProduct.title}
+          aria-label={`Image of ${selectedProduct.title}`}
         />
         <S.ProductDetails>
           <S.ProductTitle>{selectedProduct.title}</S.ProductTitle>

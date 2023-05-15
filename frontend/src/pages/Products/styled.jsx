@@ -12,7 +12,7 @@ export const Container = styled.div`
   z-index: 1;
 `;
 
-export const SortContainer = styled.div`
+export const SortContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +32,7 @@ export const SortLabel = styled.label`
   align-items: center;
 `;
 
-export const SortSelectContainer = styled.div`
+export const SortSelectContainer = styled.form`
   display: flex;
   align-items: center;
 `;

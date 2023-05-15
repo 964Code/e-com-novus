@@ -29,7 +29,6 @@ export const ModalText = styled.h4`
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: bold;
-  /*   text-transform: capitalize; */
 `;
 
 export const ButtonContainer = styled.div`
@@ -40,7 +39,7 @@ export const ButtonContainer = styled.div`
 
 export const ConfirmButton = styled.button`
   text-transform: uppercase;
-  background: #2b81af;
+  background: #144c6a;
   padding: 7px 14px;
   color: #fff;
   font-weight: 600;
@@ -57,7 +56,7 @@ export const CancelButton = styled.button`
   text-transform: uppercase;
   background: transparent;
   padding: 0.5rem 1rem;
-  color: #333;
+  color: #000000;
   border: 1px solid #ccc;
   font-weight: 600;
   cursor: pointer;

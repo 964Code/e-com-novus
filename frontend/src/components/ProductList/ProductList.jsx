@@ -132,7 +132,10 @@ function ProductList({ products }) {
             </S.ProductList>
             <S.LoadMoreContainer>
               {visibleProducts < products.length && (
-                <S.LoadMoreButton onClick={handleLoadMore}>
+                <S.LoadMoreButton
+                  onClick={handleLoadMore}
+                  aria-label='load more products'
+                >
                   Load more
                 </S.LoadMoreButton>
               )}

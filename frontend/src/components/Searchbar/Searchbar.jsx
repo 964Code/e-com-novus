@@ -21,15 +21,18 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <S.SearchBarForm onSubmit={handleSearch} expanded={expanded}>
-      <S.SearchInput
-        type='text'
-        placeholder='Search...'
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        aria-label='Search'
-        expanded={expanded}
-      />
+    <S.SearchBarForm onSubmit={handleSearch} role='search'>
+      <label htmlFor='searchInput'>
+        <S.SearchInput
+          type='text'
+          id='searchInput'
+          placeholder='Search...'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          aria-label='Search'
+          expanded={expanded}
+        />
+      </label>
       {searchTerm && expanded && (
         <S.SearchButton
           type='button'
@@ -41,7 +44,7 @@ function SearchBar({ onSearch }) {
       )}
       <S.SearchIconWrapper
         onClick={handleToggleExpand}
-        aria-label='Toggle search'
+        aria-label={expanded ? 'Hide search' : 'Toggle search'}
       >
         <S.SearchIcon />
       </S.SearchIconWrapper>

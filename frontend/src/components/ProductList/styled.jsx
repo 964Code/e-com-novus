@@ -31,7 +31,7 @@ export const ProductList = styled.div`
   }
 `;
 
-export const Product = styled.figure`
+export const Product = styled.article`
   display: flex;
   flex-direction: column;
   height: 510px;
@@ -65,7 +65,7 @@ export const ProductImage = styled.img.attrs({ loading: 'lazy' })`
   object-position: center;
 `;
 
-export const TextWrapper = styled.figcaption`
+export const TextWrapper = styled.header`
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,6 @@ export const ProductButton = styled.button.attrs((props) => ({
   }
 
   &:not(:last-child) {
-    /*  margin-right: 10px; */
   }
 `;
 

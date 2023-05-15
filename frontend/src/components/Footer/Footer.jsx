@@ -17,9 +17,15 @@ const Footer = () => {
     <S.FooterContainer>
       <S.ContentWrapper>
         <S.FooterLinks>
-          <S.FooterLink href='/contact'>Contact Us</S.FooterLink>
-          <S.FooterLink href='/terms'>Terms of Service</S.FooterLink>
-          <S.FooterLink href='/privacy'>Privacy Policy</S.FooterLink>
+          <S.FooterLink href='/contact' aria-label='Contact Us Page'>
+            Contact Us
+          </S.FooterLink>
+          <S.FooterLink href='/terms' aria-label='Terms of Service Page'>
+            Terms of Service
+          </S.FooterLink>
+          <S.FooterLink href='/privacy' aria-label='Privacy Policy Page'>
+            Privacy Policy
+          </S.FooterLink>
         </S.FooterLinks>
         <S.SocialMediaContainer>
           <S.FooterText>Follow us on social media</S.FooterText>

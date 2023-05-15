@@ -7,9 +7,14 @@ import * as S from './styled';
 function Modal({ text }) {
   const dispatch = useDispatch();
   return (
-    <S.ModalContainer>
+    <S.ModalContainer
+      role='dialog'
+      aria-modal='true'
+      aria-labelledby='modal-label'
+      aria-describedby='modal-description'
+    >
       <S.ModalContent>
-        <S.ModalText>{text}</S.ModalText>
+        <S.ModalText id='modal-label'>{text}</S.ModalText>
         <S.ButtonContainer>
           <S.ConfirmButton
             type='button'

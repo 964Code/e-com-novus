@@ -73,9 +73,19 @@ const NewNavbar = () => {
           >
             About
           </S.NavItem>
-          <S.NavItem className='dropdown' onClick={toggleDropdown}>
+          <S.NavItem
+            className='dropdown'
+            onClick={toggleDropdown}
+            role='button'
+            aria-haspopup='true'
+            aria-expanded={isDropdownOpen}
+          >
             Contact
-            <S.DropdownMenu className='dropdown' open={isDropdownOpen}>
+            <S.DropdownMenu
+              className='dropdown'
+              open={isDropdownOpen}
+              role='menu'
+            >
               {admin && (
                 <S.DropdownItem
                   onClick={() => {

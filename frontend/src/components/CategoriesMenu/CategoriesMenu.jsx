@@ -44,26 +44,32 @@ const CategoriesMenu = () => {
   return (
     <>
       <S.CategoriesMenuContainer ref={containerRef}>
-        <S.CategoriesMenuList>
+        <S.CategoriesMenuList role='menu' aria-labelledby='main-menu'>
           {Object.entries(categoriesObj).map(([key, value]) => (
             <S.CategoriesMenuItem key={key}>
               <S.CategoriesMenuLink
                 onClick={() => handleCategoryClick(key)}
                 active={selectedCategory === key}
                 showSubcategories={showSubcategories}
+                aria-label='Category menu link'
               >
                 {value.name}
               </S.CategoriesMenuLink>
               {showSubcategories &&
                 selectedCategory === key &&
                 value.subcategories && (
-                  <S.CategoriesSubMenuList>
+                  <S.CategoriesSubMenuList
+                    role='menu'
+                    aria-labelledby='sub-menu'
+                  >
                     {Object.values(value.subcategories).map((subcategory) => (
                       <S.CategoriesMenuItem key={subcategory.name}>
                         <S.CategoriesSubMenuLink
                           onClick={() =>
                             handleSubcategoryClick(subcategory.name)
                           }
+                          aria-label='Subcategory menu link'
+                          role='sub-menu'
                         >
                           {subcategory.name}
                         </S.CategoriesSubMenuLink>

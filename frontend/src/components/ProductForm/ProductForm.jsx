@@ -111,6 +111,7 @@ function ProductForm() {
             id='title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
           />
         </S.FormGroup>
 
@@ -122,6 +123,7 @@ function ProductForm() {
             id='description'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required
           />
         </S.FormGroup>
 
@@ -133,6 +135,9 @@ function ProductForm() {
             id='price'
             value={price}
             onChange={(e) => setPrice(e.target.value)}
+            required
+            min={1}
+            max={9999}
           />
         </S.FormGroup>
 
@@ -143,6 +148,7 @@ function ProductForm() {
             id='category'
             value={category}
             onChange={handleCategoryChange}
+            required
           >
             <option value=''>Select a category</option>
             {mainCategories.map((mainCategory) => (
@@ -161,6 +167,7 @@ function ProductForm() {
               id='subcategory'
               value={subcategory}
               onChange={handleSubcategoryChange}
+              required
             >
               <option value=''>Select a subcategory</option>
               {Object.keys(subCategories).map((subCategoryKey) => (
@@ -180,6 +187,7 @@ function ProductForm() {
             id='image'
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            required
           />
         </S.FormGroup>
 

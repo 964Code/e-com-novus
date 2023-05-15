@@ -32,7 +32,7 @@ export const ProductImage = styled.img.attrs({ loading: 'lazy' })`
   }
 `;
 
-export const ProductDetails = styled.div`
+export const ProductDetails = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -131,7 +131,7 @@ export const ButtonWrapper = styled.div`
 export const BackButton = styled.button`
   display: flex;
   align-items: center;
-  background-color: #ffecd4;
+  background-color: #f8b869;
   border: none;
   color: #070707;
   padding: 10px 15px;
@@ -141,7 +141,7 @@ export const BackButton = styled.button`
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #ffcc88;
+    background-color: #f8cc92;
   }
 
   @media screen and (max-width: 600px) {

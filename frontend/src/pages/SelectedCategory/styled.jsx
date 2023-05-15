@@ -35,11 +35,10 @@ export const Message = styled.p`
   text-align: center;
   font-weight: 400;
   color: #777;
-  /* font-weight: bold; */
   text-transform: uppercase;
 `;
 
-export const SortContainer = styled.div`
+export const SortContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,7 +58,7 @@ export const SortLabel = styled.label`
   align-items: center;
 `;
 
-export const SortSelectContainer = styled.div`
+export const SortSelectContainer = styled.nav`
   display: flex;
   align-items: center;
 `;

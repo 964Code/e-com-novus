@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@ export const AboutContainer = styled.div`
   margin-top: 60px;
 `;
 
-export const AboutHeader = styled.h1`
+export const AboutHeader = styled.h2`
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 1.5rem;
