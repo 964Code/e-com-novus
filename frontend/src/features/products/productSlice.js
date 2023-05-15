@@ -8,7 +8,6 @@ const initialState = {
 };
 
 const API_URL = 'http://localhost:5000/api/';
-/* const API_URL = 'http://192.168.0.128:5173/api/' */
 
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',

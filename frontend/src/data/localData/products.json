@@ -1,0 +1,161 @@
+[{
+  "_id": {
+    "$oid": "645e8b488d112141be2be2c7"
+  },
+  "title": "Minimalist Stainless Steel Watch",
+  "description": "Elevate your style with our Minimalist Stainless Steel Watch. Crafted with precision and sophistication, this sleek timepiece features a minimalist design that exudes elegance. The stainless steel case and strap ensure durability, while the quartz movement guarantees accurate timekeeping. With its clean dial and slim profile, this watch is perfect for both formal occasions and everyday wear. Make a statement of timeless style with our Minimalist Stainless Steel Watch.",
+  "price": 89.99,
+  "image": "https://cdn.shopify.com/s/files/1/0526/5814/3391/products/FS5944_main.jpg?v=1669858643",
+  "category": "electronics",
+  "subcategory": "phones",
+  "createdAt": {
+    "$date": "2023-05-12T18:54:00.397Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T11:18:16.545Z"
+  }
+},{
+  "_id": {
+    "$oid": "645e8b598d112141be2be2c9"
+  },
+  "title": "Handcrafted Leather Wallet",
+  "description": "Experience the luxurious craftsmanship of our Handcrafted Leather Wallet. Meticulously handmade by skilled artisans, this wallet is crafted from premium full-grain leather, known for its durability and softness. The compact design offers ample space for your essentials, including cards, cash, and IDs. With its meticulous stitching and attention to detail, this wallet combines functionality with timeless style. Carry your essentials in style with our Handcrafted Leather Wallet.",
+  "price": 49.99,
+  "image": "https://cdn.shopify.com/s/files/1/0568/6542/3539/products/C2973-747-view1_500x.png?v=1639584790",
+  "category": "fashion",
+  "subcategory": "accessories",
+  "createdAt": {
+    "$date": "2023-05-12T18:54:17.251Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T22:41:39.049Z"
+  }
+},{
+  "_id": {
+    "$oid": "645e8b648d112141be2be2cb"
+  },
+  "title": " Gray Merino Wool T-Shirt (L)",
+  "description": "Introducing our Gray Merino Wool T-Shirt, a versatile and stylish addition to your wardrobe. Crafted from premium merino wool, this shirt offers unparalleled comfort and exceptional performance.\n\nOne of the standout features of this remarkable T-shirt is its remarkable anti-bacterial properties. Merino wool naturally possesses inherent antibacterial qualities, making it an excellent choice for individuals who prioritize freshness and odor control. The fibers of merino wool contain lanolin, a waxy substance that acts as a natural defense mechanism against bacteria and microbes.\n\nSay goodbye to the discomfort caused by unwanted odors. Our Gray Merino Wool T-Shirt keeps you feeling fresh and confident throughout the day, even during rigorous activities. Whether you're tackling a challenging workout, embarking on an outdoor adventure, or simply going about your daily routine, this shirt will keep you feeling clean and odor-free.\n\nThe breathable nature of merino wool allows for optimal moisture management, effectively wicking away sweat from your body. This not only helps regulate your temperature but also prevents the growth of bacteria that thrive in damp environments. Stay dry, comfortable, and odor-free, no matter what the day brings.\n\nIn addition to its antibacterial properties, the Gray Merino Wool T-Shirt boasts a sleek gray color that complements any outfit. It's designed with a modern fit, providing a flattering silhouette while ensuring unrestricted movement. The softness of merino wool against your skin adds an extra touch of luxury, making it a pleasure to wear all day long.\n\nUpgrade your wardrobe with our Gray Merino Wool T-Shirt and experience the ultimate combination of style, comfort, and antibacterial performance. Embrace freshness and sophistication in one garment.",
+  "price": 29.99,
+  "image": "https://www.xxl.se/filespin/e991f5c9ec4541e9ac127618c6a83134?resize=722,722&quality=90",
+  "category": "fashion",
+  "subcategory": "mens",
+  "createdAt": {
+    "$date": "2023-05-12T18:54:28.062Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T22:42:22.515Z"
+  }
+},{
+  "_id": {
+    "$oid": "646149b7a76adb49aa23daf9"
+  },
+  "title": "Ray-Ban Original Wayfarer Sunglasses",
+  "description": "Wayfarer is iconic, fashionable, comfortable, and highly protective against harmful UV light. These unisex sunglasses are available in polarized and non-polarized options, reduce eye strain, and improve visibility during glaring light conditions.\n\nArm: 150 millimeters\n\nCase included\n\nLenses are prescription ready (rx-able)\n\nOriginal Ray Ban Packaging: includes case and cleaning cloth.\n\nMade in Italy",
+  "price": 150,
+  "image": "https://cdn-images.farfetch-contents.com/15/46/89/05/15468905_28337375_600.jpg",
+  "category": "fashion",
+  "subcategory": "accessories",
+  "createdAt": {
+    "$date": "2023-05-14T20:51:03.246Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T20:53:55.918Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614c038745a044ce746cb9"
+  },
+  "title": "Nike Air Zoom Pegasus 38 BLACK (Size 38)",
+  "description": "The Nike Air Zoom Pegasus 38 is a popular running shoe known for its comfort and performance. It features responsive cushioning, a breathable upper, and a durable rubber outsole, making it suitable for both casual runners and athletes.",
+  "price": 80,
+  "image": "https://cdn.shopify.com/s/files/1/0660/1188/9900/products/60516-54_007.png?v=1680704692&width=720",
+  "category": "fashion",
+  "subcategory": "womens",
+  "createdAt": {
+    "$date": "2023-05-14T21:00:51.580Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:02:56.083Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614d028745a044ce746cc5"
+  },
+  "title": "Philips Hue Smart Bulbs (E26) 2x",
+  "description": "Philips Hue smart bulbs are available in three color ranges: White, White ambiance, and White and color ambiance. A White light bulb offers dimmable, soft warm light. A White ambiance bulb offers dimmable light in thousands of shades of warm-to-cool white light.",
+  "price": 79,
+  "image": "https://www.assets.signify.com/is/image/Signify/dec310729ce1424a8c83ace800d9e3c4?wid=1500&hei=1125&qlt=82",
+  "category": "home",
+  "subcategory": "decor",
+  "createdAt": {
+    "$date": "2023-05-14T21:05:06.242Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:05:32.927Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614d718745a044ce746ccb"
+  },
+  "title": "Fossil Gen 5 Smartwatch",
+  "description": "The Fossil Gen 5 Smartwatch combines fashion and technology. It features a stylish design with customizable watch faces and interchangeable straps. The smartwatch offers various fitness tracking features, notifications, and compatibility with popular apps. It's a perfect accessory for those who want to stay connected while maintaining a fashionable look.",
+  "price": 179,
+  "image": "https://www.elgiganten.se/image/dv_web_D180001002281783/50592/fossil-carlyle-hr-gen-5-smartwatch-44-mm-lader-brunsvart--pdp_zoom-3000--pdp_main-540.jpg",
+  "category": "fashion",
+  "subcategory": "accessories",
+  "createdAt": {
+    "$date": "2023-05-14T21:06:57.176Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:07:10.752Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614de08745a044ce746ccf"
+  },
+  "title": "Instant Pot Duo Evo Plus",
+  "description": "The Instant Pot Duo Evo Plus is a versatile and convenient kitchen appliance. It combines multiple functions such as pressure cooking, slow cooking, sautéing, steaming, and more into one device. It can help you prepare a wide range of delicious meals in less time, making it a popular choice for busy households.",
+  "price": 125,
+  "image": "https://images-eu.ssl-images-amazon.com/images/I/71lPuDSuenL._AC_UL675_SR528,675_.jpg",
+  "category": "home",
+  "subcategory": "appliances",
+  "createdAt": {
+    "$date": "2023-05-14T21:08:48.836Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:08:48.836Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614e2a8745a044ce746cd1"
+  },
+  "title": "Nike: air Jordan 1 Retro High OG (Size 45) ",
+  "description": "Nike Air Jordan 1 sneakers are iconic and highly sought after in the world of sneakers. They feature a classic high-top design with a combination of leather and suede materials, providing both style and comfort. Air Jordan 1s come in various colorways and collaborations, making them a favorite among sneaker enthusiasts.",
+  "price": 110,
+  "image": "https://static.nike.com/a/images/t_default/a229b012-c62d-4f89-9ed2-3fca4bbe274a/sko-air-jordan-1-retro-high-og-bdgqHT.png",
+  "category": "fashion",
+  "subcategory": "mens",
+  "createdAt": {
+    "$date": "2023-05-14T21:10:02.381Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:16:38.954Z"
+  }
+},{
+  "_id": {
+    "$oid": "64614ed78745a044ce746cd3"
+  },
+  "title": "Bang & Olufsen BeoPlay A9 Black",
+  "description": "The Bang & Olufsen BeoPlay A9 is a visually stunning and technologically advanced wireless speaker system that combines exquisite design with exceptional sound quality. With its distinctive circular shape, sleek lines, and customizable fabric covers, the BeoPlay A9 effortlessly blends into any modern living space.\n\nEquipped with five powerful drivers, including a dedicated subwoofer, the BeoPlay A9 delivers immersive and room-filling audio with deep, rich bass and crystal-clear highs. Its Adaptive Bass Linearization technology ensures optimal sound performance, adjusting the bass response based on the speaker's placement in the room.\n\nThe BeoPlay A9 features built-in wireless connectivity, allowing you to effortlessly stream music from your smartphone, tablet, or computer via Bluetooth or Wi-Fi. Additionally, it supports popular music streaming services and can be controlled with the Bang & Olufsen mobile app.\n\nDesigned with convenience in mind, the BeoPlay A9 offers intuitive touch-sensitive controls on its top surface, allowing you to adjust the volume, change tracks, and play/pause with a simple touch or swipe. It also has integrated room adaptation technology that optimizes the sound based on the acoustic characteristics of the room.\n\nIn addition to its outstanding audio performance, the BeoPlay A9 doubles as a stylish statement piece, adding a touch of elegance to any room. Whether you place it on the floor or mount it on a wall, the BeoPlay A9 effortlessly combines sophisticated design, advanced technology, and superb sound quality for an unparalleled audio experience.",
+  "price": 2100,
+  "image": "https://www.elgiganten.se/image/dv_web_D180001002877998/262254/bang-olufsen-beoplay-a9-40-med-google-assistant-svartvalnot--pdp_zoom-3000--pdp_main-540.jpg",
+  "category": "electronics",
+  "subcategory": "allElectronics",
+  "createdAt": {
+    "$date": "2023-05-14T21:12:55.184Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T21:12:55.184Z"
+  }
+}]
