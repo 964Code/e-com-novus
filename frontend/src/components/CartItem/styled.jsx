@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const CartItemWrapper = styled.article`
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr auto;
@@ -23,21 +25,23 @@ export const CartItemTitle = styled.h4`
 `;
 
 export const ItemPrice = styled.h5`
-  color: #617d98;
+  color: #0869c5;
 `;
 
 export const RemoveButton = styled.button`
-  color: #645cff;
-  letter-spacing: 0.25rem;
+  color: #090909;
+  letter-spacing: 1px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   background: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
   border: none;
   margin-top: 0.375rem;
   transition: all 0.3s linear;
 
   &:hover {
-    color: #a29dff;
+    color: #f38e00;
   }
 `;
 
@@ -45,16 +49,17 @@ export const AmountButtons = styled.div``;
 
 export const AmountButton = styled.button`
   width: 24px;
+  font-size: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
 
   svg {
-    color: #645cff;
+    color: #101010;
   }
 
   &:hover svg {
-    color: #a29dff;
+    color: #2329e7;
   }
 `;
 

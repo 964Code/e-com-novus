@@ -35,7 +35,7 @@ export const Message = styled.p`
   text-align: center;
   font-weight: 400;
   color: #777;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-transform: uppercase;
 `;
 

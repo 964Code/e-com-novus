@@ -5,16 +5,26 @@ const loadCartItemsFromLocalStorage = () => {
     return cartItems ? JSON.parse(cartItems) : [];
 };
 
+const calculateAmountAndTotal = (cartItems) => {
+    const amount = cartItems.reduce((total, item) => total + item.amount, 0);
+    const total = cartItems.reduce((total, item) => total + item.price * item.amount, 0);
+    return { amount, total };
+};
+
 const saveCartItemsToLocalStorage = (cartItems) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
 };
 
+const cartItems = loadCartItemsFromLocalStorage();
+const { amount, total } = calculateAmountAndTotal(cartItems);
+
 const initialState = {
-    cartItems: loadCartItemsFromLocalStorage(),
-    amount: 0,
-    total: 0,
+    cartItems,
+    amount,
+    total,
     isLoading: false,
 };
+
 
 const cartSlice = createSlice({
     name: "cart",

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-//TODO: FIX STYLING
 export const ModalContainer = styled.aside`
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +29,7 @@ export const ModalText = styled.h4`
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: bold;
-  text-transform: capitalize;
+  /*   text-transform: capitalize; */
 `;
 
 export const ButtonContainer = styled.div`
@@ -39,11 +40,11 @@ export const ButtonContainer = styled.div`
 
 export const ConfirmButton = styled.button`
   text-transform: uppercase;
-  background: #ff4343;
-  padding: 0.5rem 1rem;
+  background: #2b81af;
+  padding: 7px 14px;
   color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.3s linear;
 
@@ -58,7 +59,7 @@ export const CancelButton = styled.button`
   padding: 0.5rem 1rem;
   color: #333;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s linear;
 

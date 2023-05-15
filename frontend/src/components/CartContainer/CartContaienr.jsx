@@ -38,9 +38,12 @@ const CartContainer = () => {
             total <S.CartTotalAmount>${total.toFixed(2)}</S.CartTotalAmount>
           </S.CartTotalText>
         </S.CartTotal>
-        <S.ClearButton onClick={() => dispatch(openModal())}>
-          clear cart
-        </S.ClearButton>
+        <S.ButtonWrapper>
+          <S.ClearButton onClick={() => dispatch(openModal())}>
+            clear cart
+          </S.ClearButton>
+          <S.CheckoutButton>checkout</S.CheckoutButton>
+        </S.ButtonWrapper>
       </S.CartFooter>
     </S.CartSection>
   );
