@@ -4,7 +4,9 @@ import { FiMenu } from 'react-icons/fi';
 import { FiX } from 'react-icons/fi';
 
 export const NavbarContainer = styled.header`
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.305);
@@ -132,13 +134,16 @@ export const CartIcon = styled(AiOutlineShoppingCart)`
 
 export const CartCount = styled.span`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: -5px;
   right: -10px;
-  background-color: red;
+  background-color: #d74713;
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 3px 6px;
+  padding: 3.5px 7px;
   border-radius: 50%;
 `;
 

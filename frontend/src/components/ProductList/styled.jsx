@@ -90,7 +90,7 @@ export const ProductPrice = styled.p`
   font-weight: bold;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  color: #6d6d6d;
+  color: #0e6bbc;
 `;
 
 export const ButtonWrapper = styled.div`
