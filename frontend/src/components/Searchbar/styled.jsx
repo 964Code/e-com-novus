@@ -3,7 +3,9 @@ import { FaSearch } from 'react-icons/fa';
 import { RiDeleteBin7Line, RiCloseFill } from 'react-icons/ri';
 
 export const SearchBarForm = styled.form`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   display: flex;
   align-items: center;
   background-color: #ffffff;

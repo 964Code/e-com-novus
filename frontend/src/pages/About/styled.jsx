@@ -8,6 +8,10 @@ export const AboutContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
+  margin-top: 60px;
 `;
 
 export const AboutHeader = styled.h1`

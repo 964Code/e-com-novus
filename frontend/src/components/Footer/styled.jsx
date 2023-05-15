@@ -12,7 +12,8 @@ export const FooterContainer = styled.footer`
   padding: 10px 20px;
   border-top: 2.5px solid rgb(229, 229, 229);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
 
   @media (max-width: 768px) and (max-height: 1000px) {
     flex-direction: column;

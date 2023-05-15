@@ -74,7 +74,7 @@ const NewNavbar = () => {
             About
           </S.NavItem>
           <S.NavItem className='dropdown' onClick={toggleDropdown}>
-            Admin
+            Contact
             <S.DropdownMenu className='dropdown' open={isDropdownOpen}>
               {admin && (
                 <S.DropdownItem

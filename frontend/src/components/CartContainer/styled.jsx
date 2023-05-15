@@ -5,6 +5,8 @@ export const CartSection = styled.section`
   margin-top: 40px;
   padding: 2.5rem 0;
   max-width: 50rem;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
 `;
 
 export const CartHeader = styled.header`

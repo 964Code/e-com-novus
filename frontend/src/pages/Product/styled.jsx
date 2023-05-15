@@ -43,7 +43,9 @@ export const ProductDetails = styled.div`
 export const ProductTitle = styled.h1`
   font-size: 2rem;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   margin-bottom: 10px;
 `;
 
@@ -51,7 +53,9 @@ export const ProductCategory = styled.p`
   font-size: 1rem;
   color: #777;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   text-transform: uppercase;
 `;
 
@@ -60,13 +64,17 @@ export const ProductDescription = styled.p`
   line-height: 1.5;
   margin-bottom: 20px;
   padding: 0 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   font-weight: 400;
 `;
 
 export const ProductPrice = styled.p`
   font-weight: bold;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'San Francisco', 'Helvetica Neue', Arial, 'Open Sans',
+    sans-serif;
+
   font-size: 1rem;
   color: #6d6d6d;
   margin-bottom: 10px;
