@@ -21,18 +21,15 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <S.SearchBarForm onSubmit={handleSearch} role='search'>
-      <label htmlFor='searchInput'>
-        <S.SearchInput
-          type='text'
-          id='searchInput'
-          placeholder='Search...'
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          aria-label='Search'
-          expanded={expanded}
-        />
-      </label>
+    <S.SearchBarForm onSubmit={handleSearch} expanded={expanded} role='search'>
+      <S.SearchInput
+        type='text'
+        placeholder='Search...'
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        aria-label='Search'
+        expanded={expanded}
+      />
       {searchTerm && expanded && (
         <S.SearchButton
           type='button'
